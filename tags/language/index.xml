@@ -1,11 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>My New Hugo Site</title>
-        <link>http://localhost:1313/</link>
-        <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 00:46:23 &#43;0800</lastBuildDate>
-            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+        <title>Language - 标签 - My New Hugo Site</title>
+        <link>http://localhost:1313/tags/language/</link>
+        <description>Language - 标签 - My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 00:46:23 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/language/" rel="self" type="application/rss+xml" /><item>
     <title>一些java基础技术</title>
     <link>http://localhost:1313/posts/language/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/</link>
     <pubDate>Fri, 19 Jun 2026 00:46:23 &#43;0800</pubDate>

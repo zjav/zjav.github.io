@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>一些java基础技术 - My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/language/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/">
+	<meta property="og:site_name" content="My New Hugo Site">
+	<meta property="og:title" content="一些java基础技术">
+	<meta property="og:description" content="java基础: 数据结构:
+1、指向不同：单向链表只有一个指向下一结点的指针，双向链表除了有一个指向下一结点的指针外，还有一个指向前一结点的指针。
+2、功能不同：单向链表只能next ，双向链表可以return。
+3、单双向不同：单链表只能单向读取，双向链表可以通过prev()快速找到前一结点。
+sql:
+行转列就是case when, group_cat eg: 3列性命, 科目, 分数 变成 姓名行 科目列 分数在中间
+列转行 union all
+over(PARTITION by)的使用
+算法: 循环不变式：初始化，保持，终止 使用RAM模型，不考虑虚拟内存，高速缓存，多核处理，简化模型后仍然面临很多选择和困难 Merge_sort中，书中给的例子是将，一个数组，分成两部分存在两个数组里，由两个数组的头部元素进行比较，在存储到原数组里。 设计算法，首先得定义问题，成本模型或者? 模型， 设计API， 用例代码 选择排序(selection sort)：a[]分为指针i=0,i to a.size() i&#43;&#43;, 永远查找最小的元素和a[i]交换 插入排序(insert sort)：一个数组，使其前半部分永远处于排序状态，将后部分元素，分别插入前部分，
+a1, a2, a1所有的元素向右移1,a2-1，直到a2为0； 注意：是找到位置在插入，不是一直交换 希尔排序(Shell sort)： 快速排序(Quric sort)： 以中间为基点，小的放左边，大的放右边，然后递归。 合并排序： 优先队列： 设计模式: 观察者模式应对一对多，一个观察者改变，所有依赖它的都要改变，设计observe，subject接口分别对应，观察模式的对象方法。进行实现 还是不太清楚装饰者模式的运行原理，它用子类扩展了父类。用需要装饰的对象继承子类或父类，以此进行不需要修改的运行？？例子是：java I/O 关于咖啡这有三种实现：
+1第一设一个beverage（饮料）的父类，所有子类继承，这样
+添加，删除都会很麻烦
+2设变量和方法的父类，继承 适配器模式, 将两个new类结合到一起, 继承一个, 在内部创建一个
+网络: osi模型
+计算机网络 1.4 51
+物理: 光纤, wifi, 何为1何为0
+数据链路: 原始的传输设施变成逻辑的传输线路.把数据拆开, 封装到数据帧
+网络层: 将分组从源端路由目标端
+传输层: 接受上层数据, 给下层使用. 是一个真正端到端的层.
+会话层:
+表示层:
+应用层:">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-06-19T00:46:23+08:00">
+		<meta property="article:modified_time" content="2026-06-19T00:46:23+08:00">
+		<meta property="article:tag" content="Java">
+		<meta property="article:tag" content="Language">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="一些java基础技术">
+	<meta name="twitter:description" content="java基础: 数据结构:
+1、指向不同：单向链表只有一个指向下一结点的指针，双向链表除了有一个指向下一结点的指针外，还有一个指向前一结点的指针。
+2、功能不同：单向链表只能next ，双向链表可以return。
+3、单双向不同：单链表只能单向读取，双向链表可以通过prev()快速找到前一结点。
+sql:
+行转列就是case when, group_cat eg: 3列性命, 科目, 分数 变成 姓名行 科目列 分数在中间
+列转行 union all
+over(PARTITION by)的使用
+算法: 循环不变式：初始化，保持，终止 使用RAM模型，不考虑虚拟内存，高速缓存，多核处理，简化模型后仍然面临很多选择和困难 Merge_sort中，书中给的例子是将，一个数组，分成两部分存在两个数组里，由两个数组的头部元素进行比较，在存储到原数组里。 设计算法，首先得定义问题，成本模型或者? 模型， 设计API， 用例代码 选择排序(selection sort)：a[]分为指针i=0,i to a.size() i&#43;&#43;, 永远查找最小的元素和a[i]交换 插入排序(insert sort)：一个数组，使其前半部分永远处于排序状态，将后部分元素，分别插入前部分，
+a1, a2, a1所有的元素向右移1,a2-1，直到a2为0； 注意：是找到位置在插入，不是一直交换 希尔排序(Shell sort)： 快速排序(Quric sort)： 以中间为基点，小的放左边，大的放右边，然后递归。 合并排序： 优先队列： 设计模式: 观察者模式应对一对多，一个观察者改变，所有依赖它的都要改变，设计observe，subject接口分别对应，观察模式的对象方法。进行实现 还是不太清楚装饰者模式的运行原理，它用子类扩展了父类。用需要装饰的对象继承子类或父类，以此进行不需要修改的运行？？例子是：java I/O 关于咖啡这有三种实现：
+1第一设一个beverage（饮料）的父类，所有子类继承，这样
+添加，删除都会很麻烦
+2设变量和方法的父类，继承 适配器模式, 将两个new类结合到一起, 继承一个, 在内部创建一个
+网络: osi模型
+计算机网络 1.4 51
+物理: 光纤, wifi, 何为1何为0
+数据链路: 原始的传输设施变成逻辑的传输线路.把数据拆开, 封装到数据帧
+网络层: 将分组从源端路由目标端
+传输层: 接受上层数据, 给下层使用. 是一个真正端到端的层.
+会话层:
+表示层:
+应用层:">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/language/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "一些java基础技术",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/language\/java\/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80\/"
+        },"genre": "posts","keywords": "java, language","wordcount":  83 ,
+        "url": "http:\/\/localhost:1313\/posts\/language\/java\/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80\/","datePublished": "2026-06-19T00:46:23+08:00","dateModified": "2026-06-19T00:46:23+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">一些java基础技术</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/language/"><i class="far fa-folder" aria-hidden="true"></i>Language</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-19">2026-06-19</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 83 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h4 id="java基础">java基础:</h4>
+<p><strong>数据结构:</strong></p>
+<p>1、指向不同：单向链表只有一个指向下一结点的指针，双向链表除了有一个指向下一结点的指针外，还有一个指向前一结点的指针。<br>
+2、功能不同：单向链表只能next ，双向链表可以return。<br>
+3、单双向不同：单链表只能单向读取，双向链表可以通过prev()快速找到前一结点。</p>
+<p><strong>sql</strong>:</p>
+<p>行转列就是case when, group_cat eg: 3列性命, 科目, 分数 变成 姓名行 科目列 分数在中间<br>
+列转行 union all</p>
+<p>over(PARTITION by)的使用</p>
+<h4 id="算法">算法:</h4>
+<ul>
+<li>循环不变式：初始化，保持，终止</li>
+<li>使用RAM模型，不考虑虚拟内存，高速缓存，多核处理，简化模型后仍然面临很多选择和困难</li>
+<li>Merge_sort中，书中给的例子是将，一个数组，分成两部分存在两个数组里，由两个数组的头部元素进行比较，在存储到原数组里。</li>
+<li>设计算法，首先得定义问题，成本模型或者? 模型， 设计API， 用例代码</li>
+</ul>
+<ol>
+<li>选择排序(selection sort)：a[]分为指针i=0,i to a.size() i++, 永远查找最小的元素和a[i]交换</li>
+<li>插入排序(insert sort)：一个数组，使其前半部分永远处于排序状态，将后部分元素，分别插入前部分，<br>
+a1, a2, a1所有的元素向右移1,a2-1，直到a2为0； 注意：是找到位置在插入，不是一直交换</li>
+<li>希尔排序(Shell sort)：</li>
+<li>快速排序(Quric sort)： 以中间为基点，小的放左边，大的放右边，然后递归。</li>
+<li>合并排序：</li>
+<li>优先队列：</li>
+</ol>
+<h4 id="设计模式">设计模式:</h4>
+<ul>
+<li>观察者模式应对一对多，一个观察者改变，所有依赖它的都要改变，设计observe，subject接口分别对应，观察模式的对象方法。进行实现</li>
+<li>还是不太清楚装饰者模式的运行原理，它用子类扩展了父类。用需要装饰的对象继承子类或父类，以此进行不需要修改的运行？？例子是：java I/O</li>
+<li>关于咖啡这有三种实现：<br>
+1第一设一个beverage（饮料）的父类，所有子类继承，这样<br>
+添加，删除都会很麻烦<br>
+2设变量和方法的父类，继承</li>
+</ul>
+<p>适配器模式, 将两个new类结合到一起, 继承一个, 在内部创建一个</p>
+<h4 id="网络">网络:</h4>
+<p>osi模型<br>
+计算机网络 1.4 51<br>
+物理: 光纤, wifi, 何为1何为0<br>
+数据链路: 原始的传输设施变成逻辑的传输线路.把数据拆开, 封装到数据帧<br>
+网络层: 将分组从源端路由目标端<br>
+传输层: 接受上层数据, 给下层使用. 是一个真正端到端的层.<br>
+会话层:<br>
+表示层:<br>
+应用层:</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2026-06-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://localhost:1313/posts/language/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/" data-title="一些java基础技术" data-hashtags="java,language"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://localhost:1313/posts/language/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/" data-title="一些java基础技术"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/language/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/" data-hashtag="java"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/language/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/" data-title="一些java基础技术"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/language/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/" data-title="一些java基础技术"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/language/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/" data-title="一些java基础技术"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/language/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/" data-title="一些java基础技术" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2flanguage%2fjava%2f%25E4%25B8%2580%25E4%25BA%259Bjava%25E5%259F%25BA%25E7%25A1%2580%2f&amp;text=%e4%b8%80%e4%ba%9bjava%e5%9f%ba%e7%a1%80%e6%8a%80%e6%9c%af" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/java/">Java</a>,&nbsp;<a href="/tags/language/">Language</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.163.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.js"></script></body>
+</html>
