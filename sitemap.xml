@@ -2,11 +2,11 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://localhost:1313/categories/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/java/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
-            <loc>http://localhost:1313/categories/language/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/language/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
-            <loc>http://localhost:1313/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
-            <loc>http://localhost:1313/posts/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
-            <loc>http://localhost:1313/posts/language/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url></urlset>
+            <loc>http://example.org/categories/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/tags/java/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/categories/language/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/tags/language/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/posts/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/tags/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/posts/language/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url></urlset>
