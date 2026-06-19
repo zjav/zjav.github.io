@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Postgress - 标签 - zjav&#39;s blog</title>
+        <link>http://example.org/tags/postgress/</link>
+        <description>Postgress - 标签 - zjav&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 16:57:10 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/postgress/" rel="self" type="application/rss+xml" /><item>
+    <title>Postgress_common</title>
+    <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress_common/</link>
+    <pubDate>Fri, 19 Jun 2026 16:57:10 &#43;0800</pubDate>
+    <author>xxxx</author>
+    <guid>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress_common/</guid>
+    <description><![CDATA[<p>postgress 常用语句</p>]]></description>
+</item>
+</channel>
+</rss>
