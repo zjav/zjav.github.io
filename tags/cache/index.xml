@@ -1,0 +1,58 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Cache - 标签 - zjav&#39;s blog</title>
+        <link>http://example.org/tags/cache/</link>
+        <description>Cache - 标签 - zjav&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 13:02:09 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/cache/" rel="self" type="application/rss+xml" /><item>
+    <title>Redis_command_命令</title>
+    <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/</link>
+    <pubDate>Fri, 19 Jun 2026 13:02:09 &#43;0800</pubDate>
+    <author>xxxx</author>
+    <guid>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/</guid>
+    <description><![CDATA[<p>安装单机版redis</p>
+<p>1、编译redis</p>
+<p>cd /opt/</p>
+<p>tar zxvf redis-3.0.6.tar.gz</p>
+<p>cd redis-3.0.6</p>
+<p>make</p>
+<p>2、创建redis目录</p>
+<p>cd src/</p>
+<p>mkdir /usr/local/redis</p>
+<p>cp redis-cli /usr/local/redis/</p>
+<p>cp redis-server /usr/local/redis/</p>
+<p>cd ..</p>
+<p>cp redis.conf /usr/local/redis/</p>
+<p>3、修改配置文件</p>
+<p>cd /usr/local/redis/</p>
+<p>vim redis.conf</p>
+<pre><code>daemonize yes
+</code></pre>
+<p>4、运行redis</p>
+<p>./redis-server redis.conf</p>
+<p>5、简单测试</p>
+<p>./redis-cli</p>
+<pre><code>127.0.0.1:6379&gt; set name tom
+
+OK
+
+127.0.0.1:6379&gt; get name
+
+&quot;tom&quot;
+</code></pre>
+<p>主从模式的redis</p>
+<p>1、在主从服务器上安装redis</p>
+<p>2、修改从服务器配置文件</p>
+<p>cd /usr/local/redis</p>
+<p>vim redis.conf</p>
+<pre><code>slaveof 192.168.8.61 6379(主)
+</code></pre>
+<p>3、重启redis</p>
+<p>4、查看主从状态</p>
+<p>info replication</p>
+<p>配置sentinel模式的集群（所有节点都配置）</p>
+<p>1、创建sentinel.conf文件</p>
+<p>cd /usr/local/redis</p>
+<p>vim redis.conf</p>]]></description>
+</item>
+</channel>
+</rss>

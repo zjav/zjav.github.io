@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Redis_command_命令 - zjav&#39;s blog</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/">
+	<meta property="og:site_name" content="zjav&#39;s blog">
+	<meta property="og:title" content="Redis_command_命令">
+	<meta property="og:description" content="安装单机版redis
+1、编译redis
+cd /opt/
+tar zxvf redis-3.0.6.tar.gz
+cd redis-3.0.6
+make
+2、创建redis目录
+cd src/
+mkdir /usr/local/redis
+cp redis-cli /usr/local/redis/
+cp redis-server /usr/local/redis/
+cd ..
+cp redis.conf /usr/local/redis/
+3、修改配置文件
+cd /usr/local/redis/
+vim redis.conf
+daemonize yes 4、运行redis
+./redis-server redis.conf
+5、简单测试
+./redis-cli
+127.0.0.1:6379&gt; set name tom OK 127.0.0.1:6379&gt; get name &#34;tom&#34; 主从模式的redis
+1、在主从服务器上安装redis
+2、修改从服务器配置文件
+cd /usr/local/redis
+vim redis.conf
+slaveof 192.168.8.61 6379(主) 3、重启redis
+4、查看主从状态
+info replication
+配置sentinel模式的集群（所有节点都配置）
+1、创建sentinel.conf文件
+cd /usr/local/redis
+vim redis.conf">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-06-19T13:02:09+08:00">
+		<meta property="article:modified_time" content="2026-06-19T13:02:09+08:00">
+		<meta property="article:tag" content="Cache">
+		<meta property="article:tag" content="Redis">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Redis_command_命令">
+	<meta name="twitter:description" content="安装单机版redis
+1、编译redis
+cd /opt/
+tar zxvf redis-3.0.6.tar.gz
+cd redis-3.0.6
+make
+2、创建redis目录
+cd src/
+mkdir /usr/local/redis
+cp redis-cli /usr/local/redis/
+cp redis-server /usr/local/redis/
+cd ..
+cp redis.conf /usr/local/redis/
+3、修改配置文件
+cd /usr/local/redis/
+vim redis.conf
+daemonize yes 4、运行redis
+./redis-server redis.conf
+5、简单测试
+./redis-cli
+127.0.0.1:6379&gt; set name tom OK 127.0.0.1:6379&gt; get name &#34;tom&#34; 主从模式的redis
+1、在主从服务器上安装redis
+2、修改从服务器配置文件
+cd /usr/local/redis
+vim redis.conf
+slaveof 192.168.8.61 6379(主) 3、重启redis
+4、查看主从状态
+info replication
+配置sentinel模式的集群（所有节点都配置）
+1、创建sentinel.conf文件
+cd /usr/local/redis
+vim redis.conf">
+<meta name="application-name" content="zjav&#39;s blog">
+<meta name="apple-mobile-web-app-title" content="zjav&#39;s blog">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/" /><link rel="prev" href="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Redis_command_命令",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/bookandother\/%E5%AE%9E%E8%B7%B5\/database\/cache\/redis_command_%E5%91%BD%E4%BB%A4\/"
+        },"genre": "posts","keywords": "cache, redis","wordcount":  561 ,
+        "url": "http:\/\/example.org\/posts\/bookandother\/%E5%AE%9E%E8%B7%B5\/database\/cache\/redis_command_%E5%91%BD%E4%BB%A4\/","datePublished": "2026-06-19T13:02:09+08:00","dateModified": "2026-06-19T13:02:09+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "zjav"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="zjav&#39;s blog">zjav&#39;s blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="zjav&#39;s blog">zjav&#39;s blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Redis_command_命令</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>zjav</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/database/"><i class="far fa-folder" aria-hidden="true"></i>Database</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-19">2026-06-19</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 561 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#widowns解压启动">widowns解压启动</a></li>
+    <li><a href="#常用命令">常用命令</a>
+      <ul>
+        <li><a href="#key命令">key命令</a></li>
+        <li><a href="#string-命令">String 命令</a></li>
+        <li><a href="#hash-命令">Hash 命令</a></li>
+        <li><a href="#list-命令">List 命令</a></li>
+      </ul>
+    </li>
+    <li><a href="#-set-命令">### Set 命令</a>
+      <ul>
+        <li><a href="#zset-命令">Zset 命令</a></li>
+      </ul>
+    </li>
+    <li><a href="#测试">测试</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>安装单机版redis</p>
+<p>1、编译redis</p>
+<p>cd /opt/</p>
+<p>tar zxvf redis-3.0.6.tar.gz</p>
+<p>cd redis-3.0.6</p>
+<p>make</p>
+<p>2、创建redis目录</p>
+<p>cd src/</p>
+<p>mkdir /usr/local/redis</p>
+<p>cp redis-cli /usr/local/redis/</p>
+<p>cp redis-server /usr/local/redis/</p>
+<p>cd ..</p>
+<p>cp redis.conf /usr/local/redis/</p>
+<p>3、修改配置文件</p>
+<p>cd /usr/local/redis/</p>
+<p>vim redis.conf</p>
+<pre><code>daemonize yes
+</code></pre>
+<p>4、运行redis</p>
+<p>./redis-server redis.conf</p>
+<p>5、简单测试</p>
+<p>./redis-cli</p>
+<pre><code>127.0.0.1:6379&gt; set name tom
+
+OK
+
+127.0.0.1:6379&gt; get name
+
+&quot;tom&quot;
+</code></pre>
+<p>主从模式的redis</p>
+<p>1、在主从服务器上安装redis</p>
+<p>2、修改从服务器配置文件</p>
+<p>cd /usr/local/redis</p>
+<p>vim redis.conf</p>
+<pre><code>slaveof 192.168.8.61 6379(主)
+</code></pre>
+<p>3、重启redis</p>
+<p>4、查看主从状态</p>
+<p>info replication</p>
+<p>配置sentinel模式的集群（所有节点都配置）</p>
+<p>1、创建sentinel.conf文件</p>
+<p>cd /usr/local/redis</p>
+<p>vim redis.conf</p>
+<pre><code>daemonize yes
+
+sentinel monitor test1 192.168.8.61 6379 1
+</code></pre>
+<p>2、启动redis-sentinel</p>
+<p>cp /opt/redis-3.0.6/src/redis-sentinel /usr/local/redis/</p>
+<p>cd /usr/local/redis/</p>
+<p>./redis-sentinel sentinel.conf</p>
+<p>3、查看节点状态</p>
+<p>info replication</p>
+<h2 id="widowns解压启动">widowns解压启动</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>redis-server.exe redis.windows.conf </code></pre></div>
+<p>安装 redis 到 windows 服务</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>redis-server --service-install redis.windows.conf</code></pre></div>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>redis-server --service-start
+redis-server --service-stop
+redis-cli.exe -h 127.0.0.1 -p 6379 
+
+Can&#39;t handle RDB format version 7
+del 删除 /home/marco/dump.rdb</code></pre></div>
+<h2 id="常用命令">常用命令</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>keys * 查看所有键
+keys apple* 匹配通配符的键</code></pre></div>
+<h3 id="key命令">key命令</h3>
+<table>
+	<thead>
+			<tr>
+					<th>命令</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>DEL</td>
+					<td>若键存在的情况下，该命令用于删除键</td>
+			</tr>
+			<tr>
+					<td>DUMP</td>
+					<td>用于序列化给定 key ，并返回被序列化的值</td>
+			</tr>
+			<tr>
+					<td>EXISTS</td>
+					<td>用于检查键是否存在，若存在则返回 1，否则返回 0</td>
+			</tr>
+			<tr>
+					<td>EXPIRE</td>
+					<td>设置 key 的过期时间，以秒为单位</td>
+			</tr>
+			<tr>
+					<td>EXPIREAT</td>
+					<td>该命令与 EXPIRE 相似，用于为 key 设置过期时间，不同在于，它的时间参数值采用的是时间戳格式。</td>
+			</tr>
+			<tr>
+					<td>KEYS</td>
+					<td>此命令用于查找与指定 pattern 匹配的 key</td>
+			</tr>
+			<tr>
+					<td>MOVE</td>
+					<td>将当前数据库中的 key 移动至指定的数据库中（默认存储为 0 库，可选 1-15中的任意库）</td>
+			</tr>
+			<tr>
+					<td>PERSIST</td>
+					<td>该命令用于删除 key 的过期时间，然后 key 将一直存在，不会过期</td>
+			</tr>
+			<tr>
+					<td>PEXPIRE</td>
+					<td>设置 key 的过期，以毫秒为单位</td>
+			</tr>
+			<tr>
+					<td>RANDOMKEY</td>
+					<td>从当前数据库中随机返回一个 key</td>
+			</tr>
+			<tr>
+					<td>RENAME</td>
+					<td>修改 key 的名称</td>
+			</tr>
+			<tr>
+					<td>SCAN</td>
+					<td>基于游标的迭代器，用于迭代数据库中存在的所有键，cursor 指的是迭代游标</td>
+			</tr>
+			<tr>
+					<td>TTL</td>
+					<td>用于检查 key 还剩多长时间过期，以秒为单位</td>
+			</tr>
+			<tr>
+					<td>TYPE</td>
+					<td>该命令用于获取 value 的数据类型</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="string-命令">String 命令</h3>
+<table>
+	<thead>
+			<tr>
+					<th>命令</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/append.html" target="_blank" rel="noopener noreffer ">APPEND</a></td>
+					<td>该命令将 value 追加到 key 所存储值的末尾</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/bitcount.html" target="_blank" rel="noopener noreffer ">BITCOUNT</a></td>
+					<td>该命令用于计算字符串中，被设置为 1 的比特位的数量。</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/decr.html" target="_blank" rel="noopener noreffer ">DECR</a></td>
+					<td>将 key 所存储的整数值减 1</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/decrby.html" target="_blank" rel="noopener noreffer ">DECRBY</a></td>
+					<td>将 key 所储存的值减去给定的递减值（decrement）</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/get.html" target="_blank" rel="noopener noreffer ">GET</a></td>
+					<td>用于检索指定键的值</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/getbit.html" target="_blank" rel="noopener noreffer ">GETBIT</a></td>
+					<td>对 key 所存储的字符串值，获取其指定偏移量上的位（bit）</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/getrange.html" target="_blank" rel="noopener noreffer ">GETRANGE</a></td>
+					<td>返回 key 中字符串值的子字符</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/getset.html" target="_blank" rel="noopener noreffer ">GETSET</a></td>
+					<td>将给定 key 的值设置为 value，并返回 key 的旧值</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/incr.html" target="_blank" rel="noopener noreffer ">INCR</a></td>
+					<td>将 key 所存储的整数值加 1</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/incrby.html" target="_blank" rel="noopener noreffer ">INCRBY</a></td>
+					<td>将 key 所储存的值加上给定的递增值（increment）</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/incrbyfloat.html" target="_blank" rel="noopener noreffer ">INCRBYFLOAT</a></td>
+					<td>将 key 所储存的值加上指定的浮点递增值（increment）</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/mget.html" target="_blank" rel="noopener noreffer ">MGET</a></td>
+					<td>一次性获取一个或多个 key 所存储的值</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/mset.html" target="_blank" rel="noopener noreffer ">MSET</a></td>
+					<td>该命令允许同时设置多个键值对</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/msetnx.html" target="_blank" rel="noopener noreffer ">MSETNX</a></td>
+					<td>当指定的 key 都不存在时，用于设置多个键值对</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/set.html" target="_blank" rel="noopener noreffer ">SET</a></td>
+					<td>用于设定指定键的值</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/setbit.html" target="_blank" rel="noopener noreffer ">SETBIT</a></td>
+					<td>对 key 所储存的字符串值，设置或清除指定偏移量上的位(bit)</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/setex.html" target="_blank" rel="noopener noreffer ">SETEX</a></td>
+					<td>将值 value 存储到 key中 ，并将 key 的过期时间设为 seconds (以秒为单位)</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/strlen.html" target="_blank" rel="noopener noreffer ">STRLEN</a></td>
+					<td>返回 key 所储存的字符串值的长度</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/setnx.html" target="_blank" rel="noopener noreffer ">SETNX</a></td>
+					<td>当 key 不存在时设置 key 的值</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/setrange.html" target="_blank" rel="noopener noreffer ">SETRANGE</a></td>
+					<td>从偏移量 offset 开始，使用指定的 value 覆盖的 key 所存储的部分字符串值</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="hash-命令">Hash 命令</h3>
+<table>
+	<thead>
+			<tr>
+					<th>命令</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/hdel.html" target="_blank" rel="noopener noreffer ">HDEL</a></td>
+					<td>用于删除一个或多个哈希表字段</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/hexists.html" target="_blank" rel="noopener noreffer ">HEXISTS</a></td>
+					<td>用于确定哈希字段是否存在</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/hget.html" target="_blank" rel="noopener noreffer ">HGET</a></td>
+					<td>获取存储在 key 中的哈希字段的值</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/hgetall.html" target="_blank" rel="noopener noreffer ">HGETALL</a></td>
+					<td>获取存储在 key 中的所有哈希字段值</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/hincrby.html" target="_blank" rel="noopener noreffer ">HINCRBY</a></td>
+					<td>为存储在 key 中的哈希表指定字段做整数增量运算</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/hkeys.html" target="_blank" rel="noopener noreffer ">HKEYS</a></td>
+					<td>获取存储在 key 中的哈希表的所有字段</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/hlen.html" target="_blank" rel="noopener noreffer ">HLEN</a></td>
+					<td>获取存储在 key 中的哈希表的字段数量</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/hset.html" target="_blank" rel="noopener noreffer ">HSET</a></td>
+					<td>用于设置存储在 key 中的哈希表字段的值</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/hvals.html" target="_blank" rel="noopener noreffer ">HVALS</a></td>
+					<td>用于获取哈希表中的所有值</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="list-命令">List 命令</h3>
+<table>
+	<thead>
+			<tr>
+					<th>命令</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/blpop.html" target="_blank" rel="noopener noreffer ">BLPOP</a></td>
+					<td>用于删除并返回列表中的第一个元素（头部操作），如果列表中没有元素，就会发生阻塞，直到列表等待超时或发现可弹出元素为止</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/brpop.html" target="_blank" rel="noopener noreffer ">BRPOP</a></td>
+					<td>用于删除并返回列表中的最后一个元素（尾部操作），如果列表中没有元素，就会发生阻塞，直到列表等待超时或发现可弹出元素为止</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/brpoplpush.html" target="_blank" rel="noopener noreffer ">BRPOPLPUSH</a></td>
+					<td>从列表中取出最后一个元素，并插入到另一个列表的头部。如果列表中没有元素，就会发生阻塞，直到等待超时或发现可弹出元素时为止</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/lindex_command.html" target="_blank" rel="noopener noreffer ">LINDEX</a></td>
+					<td>通过索引获取列表中的元素</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/linsert.html" target="_blank" rel="noopener noreffer ">LINSERT</a></td>
+					<td>指定列表中一个元素在它之前或之后插入另外一个元素</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/llen.html" target="_blank" rel="noopener noreffer ">LLEN</a></td>
+					<td>用于获取列表的长度</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/lpop.html" target="_blank" rel="noopener noreffer ">LPOP</a></td>
+					<td>从列表的头部弹出元素，默认为第一个元素</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/lpush.html" target="_blank" rel="noopener noreffer ">LPUSH</a></td>
+					<td>在列表头部插入一个或者多个值</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/lpushx.html" target="_blank" rel="noopener noreffer ">LPUSHX</a></td>
+					<td>当储存列表的 key 存在时，用于将值插入到列表头部</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/lrange.html" target="_blank" rel="noopener noreffer ">LRANGE</a></td>
+					<td>获取列表指定范围内的元素</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/lrem.html" target="_blank" rel="noopener noreffer ">LREM</a></td>
+					<td>表示从列表中删除元素与 value 相等的元素。count 表示删除的数量，为 0 表示全部移除</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/lset.html" target="_blank" rel="noopener noreffer ">LSET</a></td>
+					<td>表示通过其索引设置列表中元素的值</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/ltrim.html" target="_blank" rel="noopener noreffer ">LTRIM</a></td>
+					<td>保留列表中指定范围内的元素值</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="-set-命令">### Set 命令</h2>
+<table>
+	<thead>
+			<tr>
+					<th>命令</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/sadd.html" target="_blank" rel="noopener noreffer ">SADD</a></td>
+					<td>向集合中添加一个或者多个元素，并且自动去重</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/scard.html" target="_blank" rel="noopener noreffer ">SCARD</a></td>
+					<td>返回集合中元素的个数</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/sdiff.html" target="_blank" rel="noopener noreffer ">SDIFF</a></td>
+					<td>求两个或对多个集合的差集</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/sdiffstore.html" target="_blank" rel="noopener noreffer ">SDIFFSTORE</a></td>
+					<td>求两个集合或多个集合的差集，并将结果保存到指定的集合(key)中</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/sinter.html" target="_blank" rel="noopener noreffer ">SINTER</a></td>
+					<td>求两个或多个集合的交集</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/sinterstore.html" target="_blank" rel="noopener noreffer ">SINTERSTORE</a></td>
+					<td>求两个或多个集合的交集，并将结果保存到指定的集合(key)中</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/smembers.html" target="_blank" rel="noopener noreffer ">SMEMBERS</a></td>
+					<td>查看集合中所有元素</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/smove.html" target="_blank" rel="noopener noreffer ">SMOVE</a></td>
+					<td>将集合中的元素移动到指定的集合中</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/spop.html" target="_blank" rel="noopener noreffer ">SPOP</a></td>
+					<td>弹出指定数量的元素</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/srandmember.html" target="_blank" rel="noopener noreffer ">SRANDMEMBER</a></td>
+					<td>随机从集合中返回指定数量的元素，默认返回 1个</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/srem.html" target="_blank" rel="noopener noreffer ">SREM</a></td>
+					<td>删除一个或者多个元素，若元素不存在则自动忽略</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/sunion.html" target="_blank" rel="noopener noreffer ">SUNION</a></td>
+					<td>求两个或者多个集合的并集</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/sunsionstore.html" target="_blank" rel="noopener noreffer ">SUNIONSTORE</a></td>
+					<td>求两个或者多个集合的并集，并将结果保存到指定的集合(key)中</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="zset-命令">Zset 命令</h3>
+<table>
+	<thead>
+			<tr>
+					<th>命令</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zadd.html" target="_blank" rel="noopener noreffer ">ZADD</a></td>
+					<td>用于将一个或多个成员添加到有序集合中，或者更新已存在成员的 score 值</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zcard.html" target="_blank" rel="noopener noreffer ">ZCARD</a></td>
+					<td>获取有序集合中成员的数量</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zcount.html" target="_blank" rel="noopener noreffer ">ZCOUNT</a></td>
+					<td>用于统计有序集合中指定 score 值范围内的元素个数</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zincrby.html" target="_blank" rel="noopener noreffer ">ZINCRBY</a></td>
+					<td>用于增加有序集合中成员的分值</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zinterstore.html" target="_blank" rel="noopener noreffer ">ZINTERSTORE</a></td>
+					<td>求两个或者多个有序集合的交集，并将所得结果存储在新的 key 中</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zrange.html" target="_blank" rel="noopener noreffer ">ZRANGE</a></td>
+					<td>返回有序集合中指定索引区间内的成员数量</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zrangebylex.html" target="_blank" rel="noopener noreffer ">ZRANGEBYLEX</a></td>
+					<td>返回有序集中指定字典区间内的成员数量</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zrangebyscore.html" target="_blank" rel="noopener noreffer ">ZRANGEBYSCORE</a></td>
+					<td>返回有序集合中指定分数区间内的成员</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zrank.html" target="_blank" rel="noopener noreffer ">ZRANK</a></td>
+					<td>返回有序集合中指定成员的排名</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zrem.html" target="_blank" rel="noopener noreffer ">ZREM</a></td>
+					<td>移除有序集合中的一个或多个成员</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zremrangebyrank.html" target="_blank" rel="noopener noreffer ">ZREMRANGEBYRANK</a></td>
+					<td>移除有序集合中指定排名区间内的所有成员</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zremrangebyscore.html" target="_blank" rel="noopener noreffer ">ZREMRANGEBYSCORE</a></td>
+					<td>移除有序集合中指定分数区间内的所有成员</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zrevrange.html" target="_blank" rel="noopener noreffer ">ZREVRANGE</a></td>
+					<td>返回有序集中指定区间内的成员，通过索引，分数从高到低</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zrevrank.html" target="_blank" rel="noopener noreffer ">ZREVRANK</a></td>
+					<td>返回有序集合中指定成员的排名，有序集成员按分数值递减(从大到小)排序</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zscore.html" target="_blank" rel="noopener noreffer ">ZSCORE</a></td>
+					<td>返回有序集中，指定成员的分数值</td>
+			</tr>
+			<tr>
+					<td><a href="http://c.biancheng.net/redis2/zunionstore.html" target="_blank" rel="noopener noreffer ">ZUNIONSTORE</a></td>
+					<td>求两个或多个有序集合的并集，并将返回结果存储在新的 key 中</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="测试">测试</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="G:%5cworkspaces%5cwan%5cpicture%5ctest%5credis1.png"
+        data-srcset="G:%5cworkspaces%5cwan%5cpicture%5ctest%5credis1.png, G:%5cworkspaces%5cwan%5cpicture%5ctest%5credis1.png 1.5x, G:%5cworkspaces%5cwan%5cpicture%5ctest%5credis1.png 2x"
+        data-sizes="auto"
+        alt="G:\workspaces\wan\picture\test\redis1.png"
+        title="G:\workspaces\wan\picture\test\redis1.png" /></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>并发竞争key问题如何解决
+1. multi
+
+watch 防止写冲突 乐观锁 发现数据改变, 回滚事务
+
+exec
+2. 分布式锁
+3.时间戳
+4. 消息队列
+“Redis 并发竞争” 问题就是高并发写同一个key时导致的值错误。
+
+常用的解决方法：
+
+乐观锁，注意不要在分片集群中使用
+分布式锁，适合分布式系统环境
+时间戳，适合有序场景
+消息队列，串行化处理</code></pre></div>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code></code></pre></div>
+<blockquote>
+<p>一个命令可能无法排队，所以在调用 EXEC 之前可能会出错。例如，命令可能在语法上是错误的（参数数量错误，命令名称错误，&hellip;&hellip;），或者可能存在一些严重的情况，例如内存不足的情况（如果服务器配置为使用 maxmemory 指令具有内存限制） .<br>
+调用 EXEC 后命令可能会失败，例如，因为我们对具有错误值的键执行了操作（例如对字符串值调用列表操作）</p>
+</blockquote>
+<p>从 Redis 2.6.5 开始，服务器会在命令累积过程中检测到错误。 然后它将拒绝执行在 EXEC 期间返回错误的事务，丢弃该事务。</p>
+<p>Redis &lt; 2.6.5 的注意事项：在 Redis 2.6.5 之前，客户端需要通过检查排队命令的返回值来检测执行之前发生的错误：如果命令以 QUEUED 回复，则表示正确排队，否则 Redis 返回错误。 如果在排队命令时出现错误，大多数客户端将中止并丢弃事务。 否则，如果客户端选择继续事务，则 EXEC 命令将成功执行所有排队的命令，而不管先前的错误如何。</p>
+<blockquote>
+<p><code>RedisTemplate</code>根据配置<code>RedisSerializer</code>的 s 转换键和值（参见<a href="http://docs.spring.io/spring-data/redis/docs/current/reference/html/#redis:serializer" target="_blank" rel="noopener noreffer ">6.7 序列化程序</a>）。默认值为 <code>JdkSerializationRedisSerializer</code>.</p>
+<p>给定字符串<code>name</code>，redis 中的实际键如下所示：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>GenericJackson2JsonRedisSerializer  : &#34;name&#34;
+JacksonJsonRedisSerializer:         : &#34;name&#34;
+Jackson2JsonRedisSerializer:        : &#34;name&#34;
+JdkSerializationRedisSerializer     : \xac\xed\x00\x05t\x00\x04name
+OxmSerializer with XStreamMarshaller: &lt;string&gt;name&lt;/string&gt;
+StringRedisSerializer               : name</code></pre></div>
+</blockquote>
+<p>redis 持久化</p>
+<blockquote>
+<p>持久性是指将数据写入持久存储，例如固态磁盘 (SSD)。Redis 本身提供了一系列持久化选项：</p>
+<ul>
+<li><strong>RDB</strong>（Redis 数据库）：RDB 持久性以指定的时间间隔执行数据集的时间点快照。</li>
+<li><strong>AOF</strong>（Append Only File）：AOF 持久化记录服务器接收到的每个写操作，在服务器启动时再次播放，重建原始数据集。命令使用与 Redis 协议本身相同的格式以仅附加方式记录。当日志变得太大时，Redis 能够在后台<a href="https://redis.io/docs/manual/persistence/#log-rewriting" target="_blank" rel="noopener noreffer ">重写日志。</a></li>
+<li><strong>无持久性</strong>：如果您愿意，您可以完全禁用持久性，如果您希望您的数据只要服务器正在运行就存在。</li>
+<li><strong>RDB + AOF</strong>：可以在同一个实例中结合 AOF 和 RDB。请注意，在这种情况下，当 Redis 重新启动时，AOF 文件将用于重建原始数据集，因为它保证是最完整的。</li>
+</ul>
+</blockquote>
+<p>redis-cluster 根据hash值进行分区</p>
+<p>redis-cluster 是弱的一致性  很可能不满足读自己的写的操作, 对于没看到负载倾斜和热点的解决方案</p>
+<blockquote>
+<p>一般解决方案有: 从主库读更新的内容 适用于个人购物车 和 个人的时间主线</p>
+<p>在更新的1min内从主库读</p>
+<p>时间戳</p>
+</blockquote>
+<p>redis-cluster 满足全序广播</p>
+<p>redis-bloom 是redis 企业版</p>
+<p>JRedisBloom 实现布隆过滤器</p>
+<table>
+	<thead>
+			<tr>
+					<th>redis-modules-java</th>
+					<th>Java</th>
+					<th>Apache License 2</th>
+			</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+<p>canal解决 缓存一致性</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2026-06-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/" data-title="Redis_command_命令" data-hashtags="cache,redis"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/" data-title="Redis_command_命令"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/" data-hashtag="cache"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/" data-title="Redis_command_命令"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/" data-title="Redis_command_命令"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/" data-title="Redis_command_命令"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/" data-title="Redis_command_命令" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2fexample.org%2fposts%2fbookandother%2f%25E5%25AE%259E%25E8%25B7%25B5%2fdatabase%2fcache%2fredis_command_%25E5%2591%25BD%25E4%25BB%25A4%2f&amp;text=Redis_command_%e5%91%bd%e4%bb%a4" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/cache/">Cache</a>,&nbsp;<a href="/tags/redis/">Redis</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/bookandother/%E5%AE%9E%E8%B7%B5/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/" class="prev" rel="prev" title="一些java基础技术"><i class="fas fa-angle-left" aria-hidden="true"></i>一些java基础技术</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.163.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.js"></script></body>
+</html>

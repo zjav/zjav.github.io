@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Tags on My New Hugo Site</title>
+		<title>Tags on zjav&#39;s blog</title>
 		<link>http://example.org/tags/</link>
-		<description>Recent content in Tags on My New Hugo Site</description>
+		<description>Recent content in Tags on zjav&#39;s blog</description>
 		<generator>Hugo</generator>
 		<language>zh-CN</language>
 		
 		
 		
 		
-			<lastBuildDate>Fri, 19 Jun 2026 00:46:23 +0800</lastBuildDate>
+			<lastBuildDate>Fri, 19 Jun 2026 13:02:09 +0800</lastBuildDate>
 		
 			<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Cache</title>
+				<link>http://example.org/tags/cache/</link>
+				<pubDate>Fri, 19 Jun 2026 13:02:09 +0800</pubDate>
+				<guid>http://example.org/tags/cache/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Redis</title>
+				<link>http://example.org/tags/redis/</link>
+				<pubDate>Fri, 19 Jun 2026 13:02:09 +0800</pubDate>
+				<guid>http://example.org/tags/redis/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Java</title>
 				<link>http://example.org/tags/java/</link>
