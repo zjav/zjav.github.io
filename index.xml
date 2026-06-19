@@ -3,9 +3,59 @@
         <title>zjav&#39;s blog</title>
         <link>http://example.org/</link>
         <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 13:02:09 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 15:10:10 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Oracle 定时</title>
+    <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/</link>
+    <pubDate>Fri, 19 Jun 2026 15:10:10 &#43;0800</pubDate>
+    <author>xxxx</author>
+    <guid>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/</guid>
+    <description><![CDATA[<p>BEGIN<br>
+DBMS_SCHEDULER.CREATE_JOB (<br>
+job_name           =&gt;  &lsquo;update_sales&rsquo;,<br>
+job_type           =&gt;  &lsquo;STORED_PROCEDURE&rsquo;,<br>
+job_action         =&gt;  &lsquo;OPS.SALES_PKG.UPDATE_SALES_SUMMARY&rsquo;,<br>
+start_date         =&gt;  &lsquo;28-APR-08 07.00.00 PM Australia/Sydney&rsquo;,<br>
+repeat_interval    =&gt;  &lsquo;FREQ=DAILY;INTERVAL=2&rsquo;, /* every other day */<br>
+end_date           =&gt;  &lsquo;20-NOV-08 07.00.00 PM Australia/Sydney&rsquo;,<br>
+auto_drop          =&gt;   FALSE,<br>
+job_class          =&gt;  &lsquo;batch_update_jobs&rsquo;,<br>
+comments           =&gt;  &lsquo;My new job&rsquo;);<br>
+END;<br>
+/<br>
+After a job is created, it can be queried using the *_SCHEDULER_JOBS views.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>老的 已经不建议使用:
+begin
+dbms_job.isubmit(1,&#39;test;&#39;,sysdate,&#39;sysdate+1/1440&#39;);	//每天1440分钟，即一分钟运行test过程一次
+  commit;
+end;
+/
+test是存储过程
+
+
+新的:
+----schedule created 
+BEGIN 
+--dbms_scheduler.disable1_calendar_check();
+dbms_scheduler.create_schedule(&#39;SCHEDULE_EVERY_05MINUTE&#39;,&#39;2019-05-18 2:00:00&#39;,
+&#39;FREQ=MINUTELY;INTERVAL=5&#39;,
+NULL,
+&#39;05分钟&#39;
+);
+COMMIT; 
+END; </code></pre></div>
+<p>运行<br>
+FROM user_scheduler_jobs j<br>
+LEFT JOIN user_scheduler_running_jobs r ON j.job_name = r.job_name<br>
+WHERE j.job_name = &lsquo;YOUR_JOB_NAME&rsquo;;</p>]]></description>
+</item>
+<item>
     <title>Redis_command_命令</title>
     <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/</link>
     <pubDate>Fri, 19 Jun 2026 13:02:09 &#43;0800</pubDate>

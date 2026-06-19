@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Fri, 19 Jun 2026 13:02:09 +0800</lastBuildDate>
+			<lastBuildDate>Fri, 19 Jun 2026 15:10:10 +0800</lastBuildDate>
 		
 			<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Oracle</title>
+				<link>http://example.org/tags/oracle/</link>
+				<pubDate>Fri, 19 Jun 2026 15:10:10 +0800</pubDate>
+				<guid>http://example.org/tags/oracle/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Cache</title>
 				<link>http://example.org/tags/cache/</link>

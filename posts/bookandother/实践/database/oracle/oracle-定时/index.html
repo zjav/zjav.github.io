@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Oracle 定时 - zjav&#39;s blog</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/">
+	<meta property="og:site_name" content="zjav&#39;s blog">
+	<meta property="og:title" content="Oracle 定时">
+	<meta property="og:description" content="BEGIN
+DBMS_SCHEDULER.CREATE_JOB (
+job_name =&gt; ‘update_sales’,
+job_type =&gt; ‘STORED_PROCEDURE’,
+job_action =&gt; ‘OPS.SALES_PKG.UPDATE_SALES_SUMMARY’,
+start_date =&gt; ‘28-APR-08 07.00.00 PM Australia/Sydney’,
+repeat_interval =&gt; ‘FREQ=DAILY;INTERVAL=2’, /* every other day */
+end_date =&gt; ‘20-NOV-08 07.00.00 PM Australia/Sydney’,
+auto_drop =&gt; FALSE,
+job_class =&gt; ‘batch_update_jobs’,
+comments =&gt; ‘My new job’);
+END;
+/
+After a job is created, it can be queried using the *_SCHEDULER_JOBS views.
+老的 已经不建议使用: begin dbms_job.isubmit(1,&#39;test;&#39;,sysdate,&#39;sysdate&#43;1/1440&#39;);	//每天1440分钟，即一分钟运行test过程一次 commit; end; / test是存储过程 新的: ----schedule created BEGIN --dbms_scheduler.disable1_calendar_check(); dbms_scheduler.create_schedule(&#39;SCHEDULE_EVERY_05MINUTE&#39;,&#39;2019-05-18 2:00:00&#39;, &#39;FREQ=MINUTELY;INTERVAL=5&#39;, NULL, &#39;05分钟&#39; ); COMMIT; END; 运行
+FROM user_scheduler_jobs j
+LEFT JOIN user_scheduler_running_jobs r ON j.job_name = r.job_name
+WHERE j.job_name = ‘YOUR_JOB_NAME’;">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-06-19T15:10:10+08:00">
+		<meta property="article:modified_time" content="2026-06-19T15:10:10+08:00">
+		<meta property="article:tag" content="Oracle">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Oracle 定时">
+	<meta name="twitter:description" content="BEGIN
+DBMS_SCHEDULER.CREATE_JOB (
+job_name =&gt; ‘update_sales’,
+job_type =&gt; ‘STORED_PROCEDURE’,
+job_action =&gt; ‘OPS.SALES_PKG.UPDATE_SALES_SUMMARY’,
+start_date =&gt; ‘28-APR-08 07.00.00 PM Australia/Sydney’,
+repeat_interval =&gt; ‘FREQ=DAILY;INTERVAL=2’, /* every other day */
+end_date =&gt; ‘20-NOV-08 07.00.00 PM Australia/Sydney’,
+auto_drop =&gt; FALSE,
+job_class =&gt; ‘batch_update_jobs’,
+comments =&gt; ‘My new job’);
+END;
+/
+After a job is created, it can be queried using the *_SCHEDULER_JOBS views.
+老的 已经不建议使用: begin dbms_job.isubmit(1,&#39;test;&#39;,sysdate,&#39;sysdate&#43;1/1440&#39;);	//每天1440分钟，即一分钟运行test过程一次 commit; end; / test是存储过程 新的: ----schedule created BEGIN --dbms_scheduler.disable1_calendar_check(); dbms_scheduler.create_schedule(&#39;SCHEDULE_EVERY_05MINUTE&#39;,&#39;2019-05-18 2:00:00&#39;, &#39;FREQ=MINUTELY;INTERVAL=5&#39;, NULL, &#39;05分钟&#39; ); COMMIT; END; 运行
+FROM user_scheduler_jobs j
+LEFT JOIN user_scheduler_running_jobs r ON j.job_name = r.job_name
+WHERE j.job_name = ‘YOUR_JOB_NAME’;">
+<meta name="application-name" content="zjav&#39;s blog">
+<meta name="apple-mobile-web-app-title" content="zjav&#39;s blog">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/" /><link rel="prev" href="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Oracle 定时",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/bookandother\/%E5%AE%9E%E8%B7%B5\/database\/oracle\/oracle-%E5%AE%9A%E6%97%B6\/"
+        },"genre": "posts","keywords": "oracle","wordcount":  125 ,
+        "url": "http:\/\/example.org\/posts\/bookandother\/%E5%AE%9E%E8%B7%B5\/database\/oracle\/oracle-%E5%AE%9A%E6%97%B6\/","datePublished": "2026-06-19T15:10:10+08:00","dateModified": "2026-06-19T15:10:10+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "zjav"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="zjav&#39;s blog">zjav&#39;s blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="zjav&#39;s blog">zjav&#39;s blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Oracle 定时</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>zjav</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/database/"><i class="far fa-folder" aria-hidden="true"></i>Database</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-19">2026-06-19</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 125 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>BEGIN<br>
+DBMS_SCHEDULER.CREATE_JOB (<br>
+job_name           =&gt;  &lsquo;update_sales&rsquo;,<br>
+job_type           =&gt;  &lsquo;STORED_PROCEDURE&rsquo;,<br>
+job_action         =&gt;  &lsquo;OPS.SALES_PKG.UPDATE_SALES_SUMMARY&rsquo;,<br>
+start_date         =&gt;  &lsquo;28-APR-08 07.00.00 PM Australia/Sydney&rsquo;,<br>
+repeat_interval    =&gt;  &lsquo;FREQ=DAILY;INTERVAL=2&rsquo;, /* every other day */<br>
+end_date           =&gt;  &lsquo;20-NOV-08 07.00.00 PM Australia/Sydney&rsquo;,<br>
+auto_drop          =&gt;   FALSE,<br>
+job_class          =&gt;  &lsquo;batch_update_jobs&rsquo;,<br>
+comments           =&gt;  &lsquo;My new job&rsquo;);<br>
+END;<br>
+/<br>
+After a job is created, it can be queried using the *_SCHEDULER_JOBS views.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>老的 已经不建议使用:
+begin
+dbms_job.isubmit(1,&#39;test;&#39;,sysdate,&#39;sysdate+1/1440&#39;);	//每天1440分钟，即一分钟运行test过程一次
+  commit;
+end;
+/
+test是存储过程
+
+
+新的:
+----schedule created 
+BEGIN 
+--dbms_scheduler.disable1_calendar_check();
+dbms_scheduler.create_schedule(&#39;SCHEDULE_EVERY_05MINUTE&#39;,&#39;2019-05-18 2:00:00&#39;,
+&#39;FREQ=MINUTELY;INTERVAL=5&#39;,
+NULL,
+&#39;05分钟&#39;
+);
+COMMIT; 
+END; </code></pre></div>
+<p>运行<br>
+FROM user_scheduler_jobs j<br>
+LEFT JOIN user_scheduler_running_jobs r ON j.job_name = r.job_name<br>
+WHERE j.job_name = &lsquo;YOUR_JOB_NAME&rsquo;;</p>
+<p>FROM DBA_JOBS_RUNNING r<br>
+JOIN DBA_JOBS j ON r.job = j.job;</p>
+<p>日志</p>
+<p>select * from DBA_SCHEDULER_JOB_RUN_DETAILS  WHERE 1=1<br>
+AND log_date &gt;= to_date(&lsquo;2026-03-28&rsquo;)<br>
+AND  job_name = &lsquo;JOB_FOR_KHBB&rsquo;<br>
+;</p>
+<p>修改“重复间隔”等属性	任务会在当前调度计划执行完最后一次后，才开始使用新的频率。	若想立即生效，建议停用旧任务，然后新建一个任务。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2026-06-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/" data-title="Oracle 定时" data-hashtags="oracle"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/" data-title="Oracle 定时"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/" data-hashtag="oracle"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/" data-title="Oracle 定时"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/" data-title="Oracle 定时"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/" data-title="Oracle 定时"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/" data-title="Oracle 定时" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2fexample.org%2fposts%2fbookandother%2f%25E5%25AE%259E%25E8%25B7%25B5%2fdatabase%2foracle%2foracle-%25E5%25AE%259A%25E6%2597%25B6%2f&amp;text=Oracle%20%e5%ae%9a%e6%97%b6" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/oracle/">Oracle</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/" class="prev" rel="prev" title="Redis_command_命令"><i class="fas fa-angle-left" aria-hidden="true"></i>Redis_command_命令</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"> <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.163.2">Hugo</a> | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.js"></script></body>
+</html>
