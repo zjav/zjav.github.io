@@ -2,13 +2,16 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.org/categories/</loc><lastmod>2026-06-19T16:57:10&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/categories/</loc><lastmod>2026-06-19T19:13:10&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/tags/docker/</loc><lastmod>2026-06-19T19:13:10&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/</loc><lastmod>2026-06-19T19:13:10&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/posts/</loc><lastmod>2026-06-19T19:13:10&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/tags/</loc><lastmod>2026-06-19T19:13:10&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/categories/tool/</loc><lastmod>2026-06-19T19:13:10&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/</loc><lastmod>2026-06-19T19:13:10&#43;08:00</lastmod></url><url>
             <loc>http://example.org/categories/database/</loc><lastmod>2026-06-19T16:57:10&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/postgress/</loc><lastmod>2026-06-19T16:57:10&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress_common/</loc><lastmod>2026-06-19T16:57:10&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/</loc><lastmod>2026-06-19T16:57:10&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/tags/</loc><lastmod>2026-06-19T16:57:10&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/</loc><lastmod>2026-06-19T16:57:10&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/oracle/</loc><lastmod>2026-06-19T15:10:10&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/</loc><lastmod>2026-06-19T15:10:10&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/cache/</loc><lastmod>2026-06-19T13:02:09&#43;08:00</lastmod></url><url>

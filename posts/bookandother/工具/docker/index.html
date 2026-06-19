@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Docker-in-Action - zjav&#39;s blog</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://example.org/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/">
+	<meta property="og:site_name" content="zjav&#39;s blog">
+	<meta property="og:title" content="Docker-in-Action">
+	<meta property="og:description" content="Docker-in-Action">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-06-19T19:13:10+08:00">
+		<meta property="article:modified_time" content="2026-06-19T19:13:10+08:00">
+		<meta property="article:tag" content="Docker">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Docker-in-Action">
+	<meta name="twitter:description" content="Docker-in-Action">
+<meta name="application-name" content="zjav&#39;s blog">
+<meta name="apple-mobile-web-app-title" content="zjav&#39;s blog">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/" /><link rel="prev" href="http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress_common/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Docker-in-Action",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/bookandother\/%E5%B7%A5%E5%85%B7\/docker\/"
+        },"genre": "posts","keywords": "docker","wordcount":  642 ,
+        "url": "http:\/\/example.org\/posts\/bookandother\/%E5%B7%A5%E5%85%B7\/docker\/","datePublished": "2026-06-19T19:13:10+08:00","dateModified": "2026-06-19T19:13:10+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "zjav"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="zjav&#39;s blog">zjav&#39;s blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="zjav&#39;s blog">zjav&#39;s blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Docker-in-Action</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>zjav</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tool/"><i class="far fa-folder" aria-hidden="true"></i>Tool</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-19">2026-06-19</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 642 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#221创建和启动一-个新的容器">2.2.1创建和启动一 个新的容器</a></li>
+        <li><a href="#222-运行交互式容器">2.2.2 运行交互式容器</a></li>
+        <li><a href="#223列举-停止重新启动和查看容器输出">2.2.3列举、 停止、重新启动和查看容器输出</a></li>
+      </ul>
+    </li>
+    <li><a href="#25-构建与环境无关的系统">2.5 构建与环境无关的系统</a>
+      <ul>
+        <li><a href="#252-环境变量注入">2.5.2 环境变量注入</a></li>
+      </ul>
+    </li>
+    <li><a href="#26-建立持久化的容器">2.6 建立持久化的容器</a>
+      <ul>
+        <li><a href="#261自动重启容器">2.6.1自动重启容器</a></li>
+        <li><a href="#262-使用init和supervisor进程维持容器的运行状态">2.6.2 使用init和supervisor进程维持容器的运行状态</a></li>
+      </ul>
+    </li>
+    <li><a href="#28-小结">2.8 小结</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#333容器文件系统抽象和隔离">3.3.3容器文件系统抽象和隔离</a></li>
+      </ul>
+    </li>
+    <li><a href="#34-小结">3.4 小结</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#411存储卷提供容器无关的数据管理方式">4.1.1存储卷提供容器无关的数据管理方式</a></li>
+      </ul>
+    </li>
+    <li><a href="#42-存储卷的类型">4.2 存储卷的类型</a>
+      <ul>
+        <li><a href="#421绑定挂载卷">4.2.1绑定挂载卷</a></li>
+        <li><a href="#432-共享和volumes-from标志">4.3.2 共享和volumes-from标志</a></li>
+      </ul>
+    </li>
+    <li><a href="#46小结">4.6小结</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#522-四种网络容器原型">5.2.2 四种网络容器原型</a></li>
+      </ul>
+    </li>
+    <li><a href="#53-closed容器">5.3 Closed容器</a></li>
+    <li><a href="#54-bridged容器">5.4 Bridged容器</a>
+      <ul>
+        <li><a href="#542-自定义命名解析">5.4.2 自定义命名解析</a></li>
+        <li><a href="#543-对开放容器的访问">5.4.3 对开放容器的访问</a></li>
+        <li><a href="#544-跨容器通信">5.4.4 跨容器通信</a></li>
+      </ul>
+    </li>
+    <li><a href="#55-joined容器">5.5 Joined容器</a></li>
+    <li><a href="#56-open容器">5.6 Open容器</a></li>
+    <li><a href="#57-跨容器依赖">5.7 跨容器依赖</a>
+      <ul>
+        <li><a href="#571-链接-本地服务发现">5.7.1 链接-本地服务发现</a></li>
+        <li><a href="#574-链接的本质和缺点">5.7.4 链接的本质和缺点</a></li>
+      </ul>
+    </li>
+    <li><a href="#58小结">5.8小结</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#61资源分配">6.1资源分配</a>
+      <ul>
+        <li><a href="#611内存限制">6.1.1内存限制</a></li>
+      </ul>
+    </li>
+    <li><a href="#65-特权容器">6.5 特权容器</a></li>
+    <li><a href="#68-小结">6.8 小结</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#71从容器构建镜像">7.1从容器构建镜像</a>
+      <ul>
+        <li><a href="#712打包-git">7.1.2打包 Git</a></li>
+      </ul>
+    </li>
+    <li><a href="#75小结">7.5小结</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#81-使用dockerfile打包git">8.1 使用Dockerfile打包Git</a></li>
+    <li><a href="#82-docker入门">8.2 DOCKER入门</a>
+      <ul>
+        <li><a href="#821-元数据指令">8.2.1 元数据指令</a></li>
+        <li><a href="#822文件-系统指令">8.2.2文件 系统指令</a></li>
+      </ul>
+    </li>
+    <li><a href="#第9章公有和私有软件分发">第9章公有和私有软件分发</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Docker-in-Action</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-do">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-do" data-lang="do">docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]
+Create and run a new container from an image
+
+
+https://docs.docker.com/reference/dockerfile/#volume</code></pre></div>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220713104451.jpg"
+        data-srcset="/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220713104451.jpg, /posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220713104451.jpg 1.5x, /posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220713104451.jpg 2x"
+        data-sizes="auto"
+        alt="/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220713104451.jpg"
+        title="/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220713104451.jpg" width="716" height="273" /></p>
+<h3 id="221创建和启动一-个新的容器">2.2.1创建和启动一 个新的容器</h3>
+<blockquote>
+<p>docker run &ndash;detach <br>
+&ndash;name web nginx: latest<br>
+注意守护标记</p>
+<p>docker run -d \    启动守护容器<br>
+&ndash;name mailer\</p>
+</blockquote>
+<h3 id="222-运行交互式容器">2.2.2 运行交互式容器</h3>
+<blockquote>
+<p>docker run &ndash;interactive &ndash;tty <br>
+&ndash;link web :web <br>
+&ndash;name web_ test<br>
+busybox: latest /bin/ sh</p>
+<p>创建虚拟终端并绑定标准输入</p>
+<p>该命令使用run命令的两个标志:&ndash;interactive(或-i)和&ndash;tty(或-t)。首先，&ndash;interactive选项告诉Docker保持标准输入流(stdin，标准输入)对容器开放,即使容器没有终端连接。其次，&ndash;tty选项告诉Docker为容器分配-一个虚拟终端，这将允许你发信号给容器。这通常就是你想从交互式的命令行工具得到的。当在交互式容器中运行程序，如shell,通常两种都会用到。</p>
+<p>ps: &ndash;link 连接容器, 交流</p>
+</blockquote>
+<h3 id="223列举-停止重新启动和查看容器输出">2.2.3列举、 停止、重新启动和查看容器输出</h3>
+<blockquote>
+<p>docker ps</p>
+<p>docker restart web<br>
+docker restart mailer<br>
+docker restart agent</p>
+<p>docker logs web</p>
+<p>docker exec namespaceA ps</p>
+<p>在这个示例中，使用dockereexec命令在运行的容器中运行额外的进程。在这种情况下，使用的命令被称为ps，显示所有正在运行的进程和它们的PID。从输出上很明显地看到，每个容器都有一个带有PID1的进程。</p>
+</blockquote>
+<h2 id="25-构建与环境无关的系统">2.5 构建与环境无关的系统</h2>
+<blockquote>
+<p>docker run -d &ndash; name wp &ndash;read-only wordpress:4</p>
+<p>完成这些步骤后，检查容器是否正在运行。你可使用任何先前介绍的方法，也可以直接检查容器元数据。如果指定的wp容器正在运行，以下命令将输出为真，否则为假。</p>
+<p>docker inspect &ndash;format &ldquo;{{.State.Running}}&ldquo;wp</p>
+</blockquote>
+<h3 id="252-环境变量注入">2.5.2 环境变量注入</h3>
+<blockquote>
+<p>aocker run &ndash;emv my, BIVIROMENT. VAR=&ldquo;this isa cest&rdquo; \ |<br>
+busybox:latest <br>
+env</p>
+<p>在容器中执行插入环境env命令变量</p>
+</blockquote>
+<h2 id="26-建立持久化的容器">2.6 建立持久化的容器</h2>
+<h3 id="261自动重启容器">2.6.1自动重启容器</h3>
+<blockquote>
+<p>Docker基于重新启动策略提供了这-功能。创建容器时使用&ndash;restart标志，就可以通知Docker完成以下操作:<br>
+■从不重新启动(默认)<br>
+■检测到故障时尝试重新启动<br>
+■当检测到故障时，在一段预定的时间后重新开始尝试重启<br>
+■不管任何条件，始终重新启动容器</p>
+</blockquote>
+<h3 id="262-使用init和supervisor进程维持容器的运行状态">2.6.2 使用init和supervisor进程维持容器的运行状态</h3>
+<blockquote>
+<p>init或supervisor进程，用于启动和维护其他程序状态。在Linux系统中，PID#1是in进程。它启动所有其他系统进程，并在出现意外故障时重新启动它们。容器中使用类似模式来启动和管理进程，是一个常见的做法。</p>
+<p>容器中的supervisor进程用来保持容器始终运行，即使目标进程(如一个web服务器)，出现故障并重新启动。&ndash;个容器中可能有多个这样程序，最流行的包括init、systemd、runit、upstart和supervisord.使用这些程序发布的软件会在第8章讲解。现在，来看看使用supervisord的容器。</p>
+</blockquote>
+<h2 id="28-小结">2.8 小结</h2>
+<blockquote>
+<p>Docker项目的核心要点是使用户能够在容器上运行软件。本章介绍如何使用Docker实现这一目的。本章所涵盖的理念和功能包括以下内容:<br>
+■容器可以基于虚拟终端，连接到用户shell或以守护模式的形式运行。<br>
+■在默认情况下，每-一个Docker容器都有自己的PID命名空间，隔离了每个容器的<br>
+进程信息。<br>
+■Docker用产生的容器ID、简写的容器ID，或者其人性化的名称来标识每个容器。<br>
+■所有容器都在四个不同状态中:正在运行、暂停、重新启动或退出。<br>
+■docker exec命令可以在正运行的容器内运行一个额外的进程。<br>
+■用户可以通过输入或在容器创建时给进程指定环境变量的方式，提供额外的配置。<br>
+■使用&ndash;read-only标志创建容器时，会将挂载的容器文件系统设置为只读，防止<br>
+容器被修改。<br>
+■容器重启策略，即在容器创建时设置&ndash;restart标志，将有助于系统出现故障时<br>
+进行自动恢复。<br>
+■Docker使用docke rm 命令清理容器，和创建时一样简单。</p>
+</blockquote>
+<h1 id="第3章软件安装-的简化">第3章软件安装 的简化</h1>
+<blockquote>
+<p>安装任何软件的第一步是确定你要安装的软件。你知道软件是使用镜像发布的，但你需要知道如何确切地告诉Docker所要安装的镜像。我已经提到过，仓库存储着镜像,但在本章中我将展示仓库和标记以选择安装所需的软件镜像。</p>
+<p>本章将涉及安装Docker镜像的细节，主要有三种方式:<br>
+■Docker Hub和其他注册服务器<br>
+■使用dockersave和dockerload命令加载、导出镜像文件<br>
+■用Dockerfiles构建镜像</p>
+</blockquote>
+<h3 id="333容器文件系统抽象和隔离">3.3.3容器文件系统抽象和隔离</h3>
+<blockquote>
+<p>容器中正在运行的程序对镜像分层一无所知，仿佛该操作不是在容器中或操作镜像上运行的。从容器的角度看，它具有由镜像所提供文件的独占副本。这就是所谓Union文件系统。Docker支持多种Union文件系统，并给出适合你的最佳选择。至于Union文件系统是如何工作的，对于如何有效地使用Docker而言，意义不大。</p>
+<p>Union文件系统是创建有效文件系统隔离极为关键的一-套I具,其他工具还有MNT命名空间和chroot系统调用。</p>
+</blockquote>
+<h2 id="34-小结">3.4 小结</h2>
+<blockquote>
+<p>■Docker 用户可使用仓库名称来确定他们想通过Docker安装的软件。<br>
+■Docker Hub是默认的注册服务器，可以通过网站或docker命令行工具在Docker<br>
+Hub.上找到需要的软件。<br>
+■docker命令行工具可以很方便地通过其他注册服务器或其他形式来分发安装软件。<br>
+■镜像仓库配置中会包括注册服务器的主机信息。<br>
+docker load 和docker save 命令可以将TAR档案文件用来加载和保存镜像。<br>
+=分发一个项目的Dockerfile 可简化用户机器上构建镜像的过程。<br>
+■<strong>镜像通常和其他镜像都有父/子的关联。这些关系构成分层。当我们说，我们已经</strong><br>
+<strong>安装了一一个镜像，我们是说已经安装了一个目标镜像，及其依赖的每个镜像层。</strong><br>
+■使用分层构建镜像，可重用分层，并可节省分发带宽和机器上的存储空间。</p>
+</blockquote>
+<h1 id="第4章持久化存储-和卷间状态共享">第4章持久化存储 和卷间状态共享</h1>
+<blockquote>
+<p>ps: 为了解决保存持久的数据, 不用每次摧毁容器后, 数据消失. 为了共享</p>
+</blockquote>
+<h3 id="411存储卷提供容器无关的数据管理方式">4.1.1存储卷提供容器无关的数据管理方式</h3>
+<blockquote>
+<p>从语义.上来说，存储卷是&ndash;个数据分割和共享的工具，有一个与容器无关的范围或生命周期。这使得存储卷成为了容器化系统设计中关于文件分享或写入最重要的一-部分。数据示例根据其范围或者接入容器方式的不同，分成以下几种:</p>
+<p>■数据库软件与数据库中的数据<br>
+■web 应用程序与日志数据<br>
+■web数据处理应用程序的输入和输出数据<br>
+■web服务器与静态内容<br>
+■产品与支持工具</p>
+<p>更为基本的是，存储卷可以隔离应用程序和主机的关系。镜像被装载到主机，创建出一个容器。Docker不知道主机在哪里运行，只能判断哪些文件在容器中可用。这意味着Docker本身就没有办法利用主机上的设施，如装载的网络存储，或混合光纤和固态硬盘。但有主机知识的用户可以使用存储卷，在容器中将这些目录映射到主机的存储上。</p>
+</blockquote>
+<h2 id="42-存储卷的类型">4.2 存储卷的类型</h2>
+<h3 id="421绑定挂载卷">4.2.1绑定挂载卷</h3>
+<blockquote>
+<p>docker run -d &ndash;name bmweb <br>
+-v ~/example-docs: /usr/local/apache2/htdocs <br>
+-P 80:80 <br>
+httpd: latest</p>
+<p>在这个示例中,你使用了-v选项和位置映射来创建绑定挂载卷。该映射以冒号分隔(这是Linux命令行工具的常见风格)。映射键(冒号之前的路径)是主机文件系统上的一个绝对路径，该键值(冒号后的路径)是容器中挂载的目标存储位置。你必须使用绝对路径指定该位置。</p>
+<p>ro命令 etc</p>
+<p>The following example runs a container from the <code>alpine</code> image with the 镜像</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code> docker run alpine@sha256:9cacb71397b640eca97488cf08582ae4e4068513101088e9f96c9814bfda95e0 date</code></pre></div>
+<p><code>--name</code>选项分配容器名称</p>
+</blockquote>
+<h3 id="432-共享和volumes-from标志">4.3.2 共享和volumes-from标志</h3>
+<h2 id="46小结">4.6小结</h2>
+<blockquote>
+<p>学习如何使用Docker的第- - 个重大障碍是理解存储卷和文件系统。本章做了深入介绍，其中包括:</p>
+<p>■存储卷允许容器与主机或其他容器共享文件。</p>
+<p>■存储卷是主机文件系统的一部分，Docker将主机文件系统挂载到容器中指定位置。</p>
+<p>■两种类型的存储卷:Docker管理卷挂载主机文件系统的Docker目录，绑定挂载卷可挂载主机文件系统的任何位置。1存储卷有生命周期，且独立于任何特定的容器，但是一个用户只能通过容器句柄引用Docker管理卷。</p>
+<p>■孤立卷问题会导致磁盘空间难以恢复。可在dockerrm命令中使用-v选项来避免此问题。</p>
+<p>■卷容器模式对保证存储卷有序组织，并避免孤立卷问题非常有用。</p>
+<p>■数据打包的卷容器模式对给其他容器分发静态内容非常有用。多态容器模式是一一种组成最小功能组件并最大化重用的方法。</p>
+</blockquote>
+<h1 id="第5章网络访问">第5章网络访问</h1>
+<h3 id="522-四种网络容器原型">5.2.2 四种网络容器原型</h3>
+<blockquote>
+<p>所有的Docker容器都要符合这四种原型中的-种。这些原型定义了一个容器如何与其他的本地容器、主机网络进行通信。每一种原型有不同的目的，你可以认为它们拥有不同程度的隔离。当使用Docker创建容器时，仔细思考你的目标是非常重要的，然后在不影响目标情况下，尽可能地使用最强力的容器。如图5-5所示，其形象地描绘了每-一个原型，最强大(也意味着隔离程度最高)的在最左边，最脆弱的在最右边。</p>
+<p>四种原型如下:<br>
+■Closed容器<br>
+■Joined 容器<br>
+■Bridged 容器<br>
+■Open容器</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220713140739.jpg"
+        data-srcset="/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220713140739.jpg, /posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220713140739.jpg 1.5x, /posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220713140739.jpg 2x"
+        data-sizes="auto"
+        alt="/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220713140739.jpg"
+        title="/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220713140739.jpg" width="811" height="538" /></p>
+</blockquote>
+<h2 id="53-closed容器">5.3 Closed容器</h2>
+<blockquote>
+<p>docker run &ndash;rm \</p>
+<p>&ndash;net none<br>
+alpine:latest \</p>
+<p>ping -w 2 8.8.8.8</p>
+<p>创建一个Closed容器服务器</p>
+<p>尝试访问谷歌DNS</p>
+</blockquote>
+<h2 id="54-bridged容器">5.4 Bridged容器</h2>
+<blockquote>
+<p>docker<br>
+run &ndash;rm <br>
+&ndash;net bridge <br>
+alpine:latest <br>
+ip addr</p>
+</blockquote>
+<h3 id="542-自定义命名解析">5.4.2 自定义命名解析</h3>
+<h3 id="543-对开放容器的访问">5.4.3 对开放容器的访问</h3>
+<blockquote>
+<p>如果不能够通过网络访问容器，那么容器的功能会变得非常有限。幸运的是，事实并非如此。dockerrun命令提供了一个-p&ndash;publish=[]选项，它能够在主机网络栈上的端口和容器端口之间创建映射关系。你已经在前面多次使用过这个功能了，但是它值得我们再一次探讨。映射的格式有如下四种:</p>
+<p>dockerrun命令提供了另外&ndash;个&ndash;expose选项，它能设置容器想要开发的端口。这个选项能够被设置多次，一个端口设置一-次:</p>
+</blockquote>
+<h3 id="544-跨容器通信">5.4.4 跨容器通信</h3>
+<blockquote>
+<p><code>test</code>此示例运行一个使用该<code>debian:latest</code> 图像命名的容器。指示 Docker 分配一个连接到容器标准输入的<code>-it</code>伪 TTY；在容器中创建交互式<code>bash</code>外壳。在示例中，<code>bash</code>通过输入 退出 shell <code>exit 13</code>。此退出代码将传递给 的调用者 <code>docker run</code>，并记录在<code>test</code>容器的元数据中。</p>
+</blockquote>
+<h2 id="55-joined容器">5.5 Joined容器</h2>
+<blockquote>
+<p>docker run -it<br>
+-net container : brady<br>
+alpine:latest netstat -al</p>
+</blockquote>
+<h2 id="56-open容器">5.6 Open容器</h2>
+<blockquote>
+<p>docker run &ndash; rm<br>
+<br>
+&ndash;net host <br>
+alpine:latest ip addr</p>
+</blockquote>
+<h2 id="57-跨容器依赖">5.7 跨容器依赖</h2>
+<h3 id="571-链接-本地服务发现">5.7.1 链接-本地服务发现</h3>
+<blockquote>
+<p>docker run -d<br>
+&ndash;name importantData <br>
+&ndash;expose 3306 <br>
+dockerinact ion/mysq1_ noauth <br>
+service mysql_ noauth start 					(被链接的目的容器的名字)</p>
+<p>docker run -d - - name importantWebapp <br>
+&ndash;link imporantData:db <br>
+dockerinaction/ch5_ web startapp.sh -db			(创建一条链接并且将别名设置为db)</p>
+<p>docker run -d &ndash;name buggyProgram <br>
+docker inaction/ ch5_ buggy  			(这个容器没有到importantData容器的路由)</p>
+</blockquote>
+<h3 id="574-链接的本质和缺点">5.7.4 链接的本质和缺点</h3>
+<blockquote>
+<p>链接的本质就是静态的、具有方向性和无传递性的依赖。无传递性意味着被链接的容怀会继承链接。更具体地说，如果我链接了B到A,并且链接了C到B,那么C和A之不存在链接。如图5-12所示这三个容器的关系。</p>
+</blockquote>
+<h2 id="58小结">5.8小结</h2>
+<blockquote>
+<p>网络是一-个比较宽泛的概念，需要花费好几本书才能够覆盖全面。Docker提供的单主机网络工具涉及-些网络的基础知识，本章应该能够帮助读者对这些知识有一个基础的认识。在阅读本章的过程中，你能够学习到以下知识:</p>
+<p>■Docker 提供了四个网络容器原型: Close 容器、Bridged 容器、Joined 容器和Open<br>
+容器。<br>
+■Docker创建的网桥网络会将参与的容器互相绑定到一起，并且绑定到主机所依附的<br>
+网络_上。<br>
+■当Docker后台进程启动时，可以使用docker命令行选项用自定义的网桥接口替<br>
+代Docker创建的网桥接口。<br>
+dockerrun命令的选项能够被用来开放容器接口的端口，绑定容器开放端口到主<br>
+机的网络接口，上，还能链接其他的容器。<br>
+■禁止任意的跨容器通信是非常简单的，并且能够构建一个深度防御的系统。<br>
+■使用链接能够提供&ndash;个低负载的本地服务发现机制，并且映射具体的容器依赖。</p>
+</blockquote>
+<h1 id="第6章隔离限制危险">第6章隔离限制危险</h1>
+<blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220714104938.jpg"
+        data-srcset="/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220714104938.jpg, /posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220714104938.jpg 1.5x, /posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220714104938.jpg 2x"
+        data-sizes="auto"
+        alt="/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220714104938.jpg"
+        title="/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/images/QQ%E6%88%AA%E5%9B%BE20220714104938.jpg" width="655" height="296" /></p>
+<p>本章包含的特性主要专注于管理或者限制正在运行的软件的危险性。你将会学习到如何授予容器资源的访问权，如何访问共享的内存，如何在特殊用户下运行程序，如何控制容器对你的计算机所能做的改变，如何集成其他的Linux隔离工具。以上有些内容包含了超出本书范围的Linux特性。在这些情况下，我会尝试让你了解它们的目的，并且给你一些基础的使用案例，然后你就能够将它们和Docker集成在一起了。如图6-1所示，列出了八个命名空间(namespace)和用来构建Docker容器的特性。</p>
+<p>最后一次提醒，Docker和它使用的技术都在不断地迭代更新。因此当你使用本章提到的工具前，记得去检查下它们的开发状况，看看有没有加强的功能和最新的最佳实践方案。</p>
+</blockquote>
+<h2 id="61资源分配">6.1资源分配</h2>
+<h3 id="611内存限制">6.1.1内存限制</h3>
+<blockquote>
+<p>内存限制是你能够对容器所做的最基础的限制。它限制了容器中的进程能够使用的内存大小。内存限制对确保一一个容器不会因使用资源过多而影响到运行在同一台计算机上的其他容器非常有用。你可以通过在dockerrun或dockercreate命令上使用-m或&ndash;memory选项来设置内存限制。这个选项会接受-一个值和&ndash;个基础单元作为参数。格式如下:</p>
+<p>where unit= b,k,morg</p>
+<p>在这个命令中，b表示字节,，k表示千字节，m表示兆字节，g表示千兆字节。利用这个知识，在下面的例子中启动一个数据库应用:</p>
+<p>docker run -d &ndash;name ch6_ mariadb<br>
+&ndash;memory 256m <br>
+&ndash;cpu-shares 1024</p>
+<p>&ndash;user nobody \</p>
+<p>cap-drop all \</p>
+<p>dockerfile/mariadb</p>
+</blockquote>
+<h2 id="65-特权容器">6.5 特权容器</h2>
+<blockquote>
+<p>如果你遇到了一个只需要特权容器就能解决的问题，那么你可以使用dockerrun或dockercreate命令的&ndash;privileged选项来开启这种模式:</p>
+</blockquote>
+<h2 id="68-小结">6.8 小结</h2>
+<blockquote>
+<p>本章介绍了Linux提供的隔离特性，并讨论了Docker如何使用这些特性来构造可配置的容器。有了这些知识，你就能够自定义容器隔离度，使得Docker能够适用于任何用户场景。本章包含了以下内容:</p>
+<p>■Docker使用cgroups让用户能够设置内存限制、CPU权重、CPU核限制，还有设备<br>
+访问限制。<br>
+■每个Docker容器都有各自的IPC命名空间，它们能够被其他容器或主机共享，以<br>
+此建立基于共享内存的高速通信。<br>
+■Docker还不支持USR命名空间，因此容器中的用户和用户组ID和主机上具有相同<br>
+ID的用户和用户组是相等的。<br>
+=你可以并且应该使用docker run和docker create命令的-u选项使得容器以<br>
+非root用户运行。<br>
+■尽可能避免容器以特权模式运行。<br>
+■Linux能力提供了操作系统特性的授权功能。Docker去除某些能力是为了提供合理<br>
+的默认隔离配置。<br>
+■使用&ndash;cap-add和&ndash;cap-drop选项来赋予或去除容器的能力。<br>
+■Docker 提供了配置选项来集成加强隔离技术，比如SELinux和AppArmor。这些都<br>
+是非常强大的工具，任何认真严肃的Docker采用者都应该研究它们。</p>
+</blockquote>
+<h1 id="第2部分-镜像发布如何打包软件">第2部分 镜像发布:如何打包软件</h1>
+<blockquote>
+<p>尽管这可能不是一个频繁发生的事情，但-一个Docker使用者不可避免地需要创建一一个镜像。比如，你需要的软件没有被打包在-一个镜像中，或者你需要的一个特性在镜像中没有被允许，这些情况你都需要自建镜像。本部分会帮助你理解如何初始化、自定义和特殊化你想要部署或共享的镜像。</p>
+</blockquote>
+<h1 id="第7章在镜像中打包软件">第7章在镜像中打包软件</h1>
+<blockquote>
+<p>创建容器有两种方法，要么手工修改现有容器中的镜像，要么定义、执行一个名为Dockerfile的自动化构建脚本。本章关注于手工修改镜像的过程、镜像操作的基本机制、还有最终人工产生的镜像。Dockerfile和构建自动化内容包含在第8章中。</p>
+</blockquote>
+<h2 id="71从容器构建镜像">7.1从容器构建镜像</h2>
+<blockquote>
+<p>docker run &ndash;name hw_ container <br>
+ubuntu:latest <br>
+touch /Hel loWorld<br>
+docker commit hw_ container hw_ image<br>
+docker rm -vf hw_ container<br>
+docker run.<br>
+&ndash;rm <br>
+hw_ image <br>
+1s -1 /HelloWorld</p>
+</blockquote>
+<h3 id="712打包-git">7.1.2打包 Git</h3>
+<blockquote>
+<p>docker .run -it -name image-dev ubuntu: latest /bin/bash</p>
+<p>apt-get -y install git</p>
+<p>git version<br>
+#输出结果如下:<br>
+#git version 1.9.1</p>
+<p>exit</p>
+</blockquote>
+<h2 id="75小结">7.5小结</h2>
+<blockquote>
+<p>这章包含Docker镜像创建、标签管理和其他发布所需要关心内容。这些内容能够帮助你构建镜像和成为-一个更加优秀的容器使用者。下面是本章的关键内容:</p>
+<p>■当使用docker commit 命令提交容器时，新的镜像被创建。<br>
+■当一个容器被提交，启动容器时的配置也会被编码进新镜像的配置文件中。<br>
+■一个镜像由多层以栈形式组成，且镜像由其中的最顶层来标识。<br>
+■镜像的磁盘大小就是组成镜像的层的大小总和。<br>
+■可以使用docker export 和docker import 命令将镜像导出为压缩文件格式，<br>
+或将压缩文件导入到镜像。<br>
+■dockertag命令能够被用来对同一个仓库赋予多个标签。<br>
+■仓库维护者应该保持标签的实用性，让用户更容易采用和迁移控制。<br>
+将软件的最新稳定版标记为latest。<br>
+■提供细粒度、重叠的标签，这有利于用户掌控软件的版本进展。</p>
+</blockquote>
+<h1 id="第8章-构建自动化和高级镜像设置">第8章 构建自动化和高级镜像设置</h1>
+<blockquote>
+<p>Dockerfle是一-个文件，它由构建镜像的指令组成。指令由Docker镜像构建者自上而下排列，能够被用来修改镜像的任何信息。使用Dockerfile构建镜像使得很多任务变得非常简单，如同从计算机添加一个文件到容器中，只需要一行指令。本节包含了Dockerfile的基础知识、为什么使用Dockerfile是最佳方式的原因、对Dockerfile指令的简要概括、如何添加未来构建行为的内容。让我们从一个熟悉的例子开始吧。</p>
+</blockquote>
+<h2 id="81-使用dockerfile打包git">8.1 使用Dockerfile打包Git</h2>
+<blockquote>
+<p>FROM ubuntu: latest<br>
+MAINTAINER &ldquo;docker inact ion@all ingeek . com&rdquo;<br>
+RUN apt-get install -y git<br>
+ENTRYPOINT [&ldquo;git&rdquo;]</p>
+<p>在详细解释这个例子前,让我们先在包含Dockerfile文件的目录中使用dockerbuild命令，从Dockerfile文件创建一个新镜像，并将新镜像的标签设为auto:</p>
+<p>docker build -tag ubuntu-git:auto。</p>
+<p>■FROM ubuntu:latest 一 和手工创建类似，告诉Docker从最新的Ubuntu镜<br>
+像创建新镜像。<br>
+■MAINTAINER<br>
+设置镜像维护者的名字和邮箱。当用户遇到问题时，这些信息能<br>
+够帮助这些人联系维护者。设置这些信息之前都是通过调用commit子命令来完成的。<br>
+■ RUN apt-get install -y git一告诉Docker运行该命令来安装Git。</p>
+<p>■ENTRY POINT [&ldquo;git&rdquo;]一将镜像的入口点设置为 git。</p>
+</blockquote>
+<h2 id="82-docker入门">8.2 DOCKER入门</h2>
+<blockquote>
+<p>FROM debian: wheezy<br>
+MAINTAINER Jeff Nickoloff &ldquo;dia@al 1 ingeek. com&rsquo;<br>
+RUN groupadd -r -g 2200 example &amp;<br>
+useradd -rM -g example -u 2200 examp1e<br>
+ENV APPROOT= &ldquo;/app&rdquo; <br>
+APP=&ldquo;mailer.sh&rdquo; <br>
+VERSION=&ldquo;0.6&rdquo;<br>
+LABEL base . name= &ldquo;Mailer Archetype&rdquo; <br>
+base . version=&quot;$ {VERSION}&rdquo;<br>
+WORKDIR $APPROOT<br>
+ADD。$APPROOT<br>
+这个<br>
+ENTRYPOINT [&rdquo; /app/ mailer . sh&rdquo;]<br>
+EXPOSE 33333</p>
+</blockquote>
+<h3 id="821-元数据指令">8.2.1 元数据指令</h3>
+<blockquote>
+<p>接下来的两个指令是WORKDIR和EXPOSE。同样，它们和dockerrun或dockercreate命令上对应选项的功能是一致的。一个环境变量作为-一个参数在WORKDIR命令中被使用:</p>
+</blockquote>
+<h3 id="822文件-系统指令">8.2.2文件 系统指令</h3>
+<blockquote>
+<p>FROM docker inaction/ mailer-base:0.6<br>
+COPY [&quot; ./1og- impl&quot;, &ldquo;$ {APPROOT}&rdquo;]<br>
+RUN chmod a+x ${APPR0OT}/${APP} &amp;&amp; <br>
+chown example : example /var/log<br>
+USER example : example<br>
+VOLUME [&quot;/var/1og&quot;]<br>
+CMD [&quot; /var/ 1og/mailer.1og&quot;]</p>
+<p>和ENTRYPOINT等指令类似，COPY指令同样支持shell格式和exec格式。但是如果任何一个参数包含了空格，那么你必须要使用exec格式。</p>
+<p>/bin/sh -C &rsquo;exec . /mailer. sh'</p>
+<p>第二个新指令是VOLUME。如果你理解了dockerrun或dockercreate命令的.&ndash;volume选项，那么这个指令将会按照你所期望的那样运行。在字符串数组参数中的每一个值都会在产生的新层中被创建为&ndash;个新的卷定义。在镜像构建时定义卷比在运行时更加受到限制。你没有办法在镜像构建时指定&ndash;个绑定-挂载(bindmount)卷或者只读卷。这个指令只能够在文件系统中创建一一个指定的位置，然后将一-个卷定义添加到镜像元数据中。</p>
+<p>在这个Dockerfile的最后一个指令是CMD。CMD和ENTRYPOINT很相关。它们都能够支持shell格式和exec格式，并且都能够被用来在容器中启动&ndash;个进程。但它们依旧存在一些很重要的区别。</p>
+<p>CMD指令表示入口点的一个参数列表。一个容器的默认入口点是/bin/sh.如果一个容器的入口点没有被设置，这个默认值会被使用。但是，如果入口点被设置了，并且使用的是exec格式，那么你将使用CMD指令来设置默认参数。这个Dockerfile使用的基础镜像将ENTRYPOINT定义为邮件程序。同时，这个Dockerfile注入了一-个mailer.sh的实现，并且指定了一个默认参数。这个参数是日志文件的位置。</p>
+</blockquote>
+<h2 id="第9章公有和私有软件分发">第9章公有和私有软件分发</h2></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2026-06-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://example.org/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/" data-title="Docker-in-Action" data-hashtags="docker"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://example.org/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/" data-title="Docker-in-Action"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.org/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/" data-hashtag="docker"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/" data-title="Docker-in-Action"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.org/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/" data-title="Docker-in-Action"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.org/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/" data-title="Docker-in-Action"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://example.org/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/" data-title="Docker-in-Action" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2fexample.org%2fposts%2fbookandother%2f%25E5%25B7%25A5%25E5%2585%25B7%2fdocker%2f&amp;text=Docker-in-Action" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/docker/">Docker</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress_common/" class="prev" rel="prev" title="Postgress_common"><i class="fas fa-angle-left" aria-hidden="true"></i>Postgress_common</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"> <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.163.2">Hugo</a> | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.js"></script></body>
+</html>

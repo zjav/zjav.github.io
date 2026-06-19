@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Fri, 19 Jun 2026 16:57:10 +0800</lastBuildDate>
+			<lastBuildDate>Fri, 19 Jun 2026 19:13:10 +0800</lastBuildDate>
 		
 			<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Docker</title>
+				<link>http://example.org/tags/docker/</link>
+				<pubDate>Fri, 19 Jun 2026 19:13:10 +0800</pubDate>
+				<guid>http://example.org/tags/docker/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Postgress</title>
 				<link>http://example.org/tags/postgress/</link>
