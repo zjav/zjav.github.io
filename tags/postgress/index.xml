@@ -3,7 +3,19 @@
         <title>Postgress - 标签 - zjav&#39;s blog</title>
         <link>http://example.org/tags/postgress/</link>
         <description>Postgress - 标签 - zjav&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 20 Jun 2026 12:35:00 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/postgress/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 20 Jun 2026 12:42:35 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/postgress/" rel="self" type="application/rss+xml" /><item>
+    <title>Postgress Explain</title>
+    <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress-explain/</link>
+    <pubDate>Sat, 20 Jun 2026 12:42:35 &#43;0800</pubDate>
+    <author>xxxx</author>
+    <guid>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress-explain/</guid>
+    <description><![CDATA[<p>explain ANALYZE   会执行语句, 显示时间<br>
+EXPLAIN ANALYZE 中的 actual time 是实际执行时间，单位是 毫秒（ms）</p>
+<p>explain 里的cost是成本, 单位不是秒</p>
+<p>join太多, 可以把大表的索引加上, 比如a join b, a和b都是大表. 刚开始只有a有条件, 可以给b加一个</p>
+<p>第二种就是改成子查询了</p>]]></description>
+</item>
+<item>
     <title>DO和游标</title>
     <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/do%E5%92%8C%E6%B8%B8%E6%A0%87/</link>
     <pubDate>Sat, 20 Jun 2026 12:35:00 &#43;0800</pubDate>
