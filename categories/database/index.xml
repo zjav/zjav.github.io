@@ -3,7 +3,15 @@
         <title>Database - 分类 - zjav&#39;s blog</title>
         <link>http://example.org/categories/database/</link>
         <description>Database - 分类 - zjav&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 16:57:10 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/database/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 20 Jun 2026 12:35:00 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/database/" rel="self" type="application/rss+xml" /><item>
+    <title>DO和游标</title>
+    <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/do%E5%92%8C%E6%B8%B8%E6%A0%87/</link>
+    <pubDate>Sat, 20 Jun 2026 12:35:00 &#43;0800</pubDate>
+    <author>xxxx</author>
+    <guid>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/do%E5%92%8C%E6%B8%B8%E6%A0%87/</guid>
+    <description><![CDATA[<p>DO和游标</p>]]></description>
+</item>
+<item>
     <title>Postgress_common</title>
     <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress_common/</link>
     <pubDate>Fri, 19 Jun 2026 16:57:10 &#43;0800</pubDate>
