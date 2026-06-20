@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Redis - 标签 - zjav&#39;s blog</title>
-        <link>http://example.org/tags/redis/</link>
+        <link>https://zjav.github.io/tags/redis/</link>
         <description>Redis - 标签 - zjav&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 13:02:09 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/redis/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 13:02:09 &#43;0800</lastBuildDate><atom:link href="https://zjav.github.io/tags/redis/" rel="self" type="application/rss+xml" /><item>
     <title>Redis_command_命令</title>
-    <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/</link>
+    <link>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/</link>
     <pubDate>Fri, 19 Jun 2026 13:02:09 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/</guid>
+    <guid>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/</guid>
     <description><![CDATA[<p>安装单机版redis</p>
 <p>1、编译redis</p>
 <p>cd /opt/</p>

@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Database - 分类 - zjav&#39;s blog</title>
-        <link>http://example.org/categories/database/</link>
+        <link>https://zjav.github.io/categories/database/</link>
         <description>Database - 分类 - zjav&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 20 Jun 2026 12:42:35 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/database/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 20 Jun 2026 12:42:35 &#43;0800</lastBuildDate><atom:link href="https://zjav.github.io/categories/database/" rel="self" type="application/rss+xml" /><item>
     <title>Postgress Explain</title>
-    <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress-explain/</link>
+    <link>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress-explain/</link>
     <pubDate>Sat, 20 Jun 2026 12:42:35 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress-explain/</guid>
+    <guid>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress-explain/</guid>
     <description><![CDATA[<p>explain ANALYZE   会执行语句, 显示时间<br>
 EXPLAIN ANALYZE 中的 actual time 是实际执行时间，单位是 毫秒（ms）</p>
 <p>explain 里的cost是成本, 单位不是秒</p>
@@ -17,26 +17,26 @@ EXPLAIN ANALYZE 中的 actual time 是实际执行时间，单位是 毫秒（ms
 </item>
 <item>
     <title>DO和游标</title>
-    <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/do%E5%92%8C%E6%B8%B8%E6%A0%87/</link>
+    <link>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/do%E5%92%8C%E6%B8%B8%E6%A0%87/</link>
     <pubDate>Sat, 20 Jun 2026 12:35:00 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/do%E5%92%8C%E6%B8%B8%E6%A0%87/</guid>
+    <guid>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/do%E5%92%8C%E6%B8%B8%E6%A0%87/</guid>
     <description><![CDATA[<p>DO和游标</p>]]></description>
 </item>
 <item>
     <title>Postgress_common</title>
-    <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress_common/</link>
+    <link>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress_common/</link>
     <pubDate>Fri, 19 Jun 2026 16:57:10 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress_common/</guid>
+    <guid>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress_common/</guid>
     <description><![CDATA[<p>postgress 常用语句</p>]]></description>
 </item>
 <item>
     <title>Oracle 定时</title>
-    <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/</link>
+    <link>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/</link>
     <pubDate>Fri, 19 Jun 2026 15:10:10 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/</guid>
+    <guid>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/</guid>
     <description><![CDATA[<p>BEGIN<br>
 DBMS_SCHEDULER.CREATE_JOB (<br>
 job_name           =&gt;  &lsquo;update_sales&rsquo;,<br>
@@ -83,10 +83,10 @@ WHERE j.job_name = &lsquo;YOUR_JOB_NAME&rsquo;;</p>]]></description>
 </item>
 <item>
     <title>Redis_command_命令</title>
-    <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/</link>
+    <link>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/</link>
     <pubDate>Fri, 19 Jun 2026 13:02:09 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/</guid>
+    <guid>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/</guid>
     <description><![CDATA[<p>安装单机版redis</p>
 <p>1、编译redis</p>
 <p>cd /opt/</p>

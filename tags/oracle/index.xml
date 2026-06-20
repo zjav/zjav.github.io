@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Oracle - 标签 - zjav&#39;s blog</title>
-        <link>http://example.org/tags/oracle/</link>
+        <link>https://zjav.github.io/tags/oracle/</link>
         <description>Oracle - 标签 - zjav&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 15:10:10 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/oracle/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 15:10:10 &#43;0800</lastBuildDate><atom:link href="https://zjav.github.io/tags/oracle/" rel="self" type="application/rss+xml" /><item>
     <title>Oracle 定时</title>
-    <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/</link>
+    <link>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/</link>
     <pubDate>Fri, 19 Jun 2026 15:10:10 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/</guid>
+    <guid>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/</guid>
     <description><![CDATA[<p>BEGIN<br>
 DBMS_SCHEDULER.CREATE_JOB (<br>
 job_name           =&gt;  &lsquo;update_sales&rsquo;,<br>

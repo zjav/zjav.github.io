@@ -2,24 +2,24 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.org/categories/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/categories/database/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/tags/postgress/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress-explain/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/tags/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/do%E5%92%8C%E6%B8%B8%E6%A0%87/</loc><lastmod>2026-06-20T12:35:00&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/tags/docker/</loc><lastmod>2026-06-19T19:13:10&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/</loc><lastmod>2026-06-19T19:13:10&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/categories/tool/</loc><lastmod>2026-06-19T19:13:10&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress_common/</loc><lastmod>2026-06-19T16:57:10&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/tags/oracle/</loc><lastmod>2026-06-19T15:10:10&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/</loc><lastmod>2026-06-19T15:10:10&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/tags/cache/</loc><lastmod>2026-06-19T13:02:09&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/tags/redis/</loc><lastmod>2026-06-19T13:02:09&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/</loc><lastmod>2026-06-19T13:02:09&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/tags/java/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/categories/language/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/tags/language/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url></urlset>
+            <loc>https://zjav.github.io/categories/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/categories/database/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/tags/postgress/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress-explain/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/posts/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/tags/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/</loc><lastmod>2026-06-20T12:42:35&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/do%E5%92%8C%E6%B8%B8%E6%A0%87/</loc><lastmod>2026-06-20T12:35:00&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/tags/docker/</loc><lastmod>2026-06-19T19:13:10&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/</loc><lastmod>2026-06-19T19:13:10&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/categories/tool/</loc><lastmod>2026-06-19T19:13:10&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/postgress/postgress_common/</loc><lastmod>2026-06-19T16:57:10&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/tags/oracle/</loc><lastmod>2026-06-19T15:10:10&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/oracle/oracle-%E5%AE%9A%E6%97%B6/</loc><lastmod>2026-06-19T15:10:10&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/tags/cache/</loc><lastmod>2026-06-19T13:02:09&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/tags/redis/</loc><lastmod>2026-06-19T13:02:09&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/database/cache/redis_command_%E5%91%BD%E4%BB%A4/</loc><lastmod>2026-06-19T13:02:09&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/tags/java/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/categories/language/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/tags/language/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url><url>
+            <loc>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/</loc><lastmod>2026-06-19T00:46:23&#43;08:00</lastmod></url></urlset>

@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tool - 分类 - zjav&#39;s blog</title>
-        <link>http://example.org/categories/tool/</link>
+        <link>https://zjav.github.io/categories/tool/</link>
         <description>Tool - 分类 - zjav&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 19:13:10 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/tool/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 19:13:10 &#43;0800</lastBuildDate><atom:link href="https://zjav.github.io/categories/tool/" rel="self" type="application/rss+xml" /><item>
     <title>Docker-in-Action</title>
-    <link>http://example.org/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/</link>
+    <link>https://zjav.github.io/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/</link>
     <pubDate>Fri, 19 Jun 2026 19:13:10 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://example.org/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/</guid>
+    <guid>https://zjav.github.io/posts/bookandother/%E5%B7%A5%E5%85%B7/docker/</guid>
     <description><![CDATA[<p>Docker-in-Action</p>]]></description>
 </item>
 </channel>

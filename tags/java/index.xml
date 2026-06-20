@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Java - 标签 - zjav&#39;s blog</title>
-        <link>http://example.org/tags/java/</link>
+        <link>https://zjav.github.io/tags/java/</link>
         <description>Java - 标签 - zjav&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 00:46:23 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/java/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 19 Jun 2026 00:46:23 &#43;0800</lastBuildDate><atom:link href="https://zjav.github.io/tags/java/" rel="self" type="application/rss+xml" /><item>
     <title>一些java基础技术</title>
-    <link>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/</link>
+    <link>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/</link>
     <pubDate>Fri, 19 Jun 2026 00:46:23 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://example.org/posts/bookandother/%E5%AE%9E%E8%B7%B5/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/</guid>
+    <guid>https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/java/%E4%B8%80%E4%BA%9Bjava%E5%9F%BA%E7%A1%80/</guid>
     <description><![CDATA[<h4 id="java基础">java基础:</h4>
 <p><strong>数据结构:</strong></p>
 <p>1、指向不同：单向链表只有一个指向下一结点的指针，双向链表除了有一个指向下一结点的指针外，还有一个指向前一结点的指针。<br>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Tags on zjav&#39;s blog</title>
-		<link>http://example.org/tags/</link>
+		<link>https://zjav.github.io/tags/</link>
 		<description>Recent content in Tags on zjav&#39;s blog</description>
 		<generator>Hugo</generator>
 		<language>zh-CN</language>
@@ -12,54 +12,54 @@
 		
 			<lastBuildDate>Sat, 20 Jun 2026 12:42:35 +0800</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://zjav.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Postgress</title>
-				<link>http://example.org/tags/postgress/</link>
+				<link>https://zjav.github.io/tags/postgress/</link>
 				<pubDate>Sat, 20 Jun 2026 12:42:35 +0800</pubDate>
-				<guid>http://example.org/tags/postgress/</guid>
+				<guid>https://zjav.github.io/tags/postgress/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Docker</title>
-				<link>http://example.org/tags/docker/</link>
+				<link>https://zjav.github.io/tags/docker/</link>
 				<pubDate>Fri, 19 Jun 2026 19:13:10 +0800</pubDate>
-				<guid>http://example.org/tags/docker/</guid>
+				<guid>https://zjav.github.io/tags/docker/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Oracle</title>
-				<link>http://example.org/tags/oracle/</link>
+				<link>https://zjav.github.io/tags/oracle/</link>
 				<pubDate>Fri, 19 Jun 2026 15:10:10 +0800</pubDate>
-				<guid>http://example.org/tags/oracle/</guid>
+				<guid>https://zjav.github.io/tags/oracle/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Cache</title>
-				<link>http://example.org/tags/cache/</link>
+				<link>https://zjav.github.io/tags/cache/</link>
 				<pubDate>Fri, 19 Jun 2026 13:02:09 +0800</pubDate>
-				<guid>http://example.org/tags/cache/</guid>
+				<guid>https://zjav.github.io/tags/cache/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Redis</title>
-				<link>http://example.org/tags/redis/</link>
+				<link>https://zjav.github.io/tags/redis/</link>
 				<pubDate>Fri, 19 Jun 2026 13:02:09 +0800</pubDate>
-				<guid>http://example.org/tags/redis/</guid>
+				<guid>https://zjav.github.io/tags/redis/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Java</title>
-				<link>http://example.org/tags/java/</link>
+				<link>https://zjav.github.io/tags/java/</link>
 				<pubDate>Fri, 19 Jun 2026 00:46:23 +0800</pubDate>
-				<guid>http://example.org/tags/java/</guid>
+				<guid>https://zjav.github.io/tags/java/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Language</title>
-				<link>http://example.org/tags/language/</link>
+				<link>https://zjav.github.io/tags/language/</link>
 				<pubDate>Fri, 19 Jun 2026 00:46:23 +0800</pubDate>
-				<guid>http://example.org/tags/language/</guid>
+				<guid>https://zjav.github.io/tags/language/</guid>
 				<description></description>
 			</item>
 	</channel>

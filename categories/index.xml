@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Categories on zjav&#39;s blog</title>
-		<link>http://example.org/categories/</link>
+		<link>https://zjav.github.io/categories/</link>
 		<description>Recent content in Categories on zjav&#39;s blog</description>
 		<generator>Hugo</generator>
 		<language>zh-CN</language>
@@ -12,26 +12,26 @@
 		
 			<lastBuildDate>Sat, 20 Jun 2026 12:42:35 +0800</lastBuildDate>
 		
-			<atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://zjav.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Database</title>
-				<link>http://example.org/categories/database/</link>
+				<link>https://zjav.github.io/categories/database/</link>
 				<pubDate>Sat, 20 Jun 2026 12:42:35 +0800</pubDate>
-				<guid>http://example.org/categories/database/</guid>
+				<guid>https://zjav.github.io/categories/database/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Tool</title>
-				<link>http://example.org/categories/tool/</link>
+				<link>https://zjav.github.io/categories/tool/</link>
 				<pubDate>Fri, 19 Jun 2026 19:13:10 +0800</pubDate>
-				<guid>http://example.org/categories/tool/</guid>
+				<guid>https://zjav.github.io/categories/tool/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Language</title>
-				<link>http://example.org/categories/language/</link>
+				<link>https://zjav.github.io/categories/language/</link>
 				<pubDate>Fri, 19 Jun 2026 00:46:23 +0800</pubDate>
-				<guid>http://example.org/categories/language/</guid>
+				<guid>https://zjav.github.io/categories/language/</guid>
 				<description></description>
 			</item>
 	</channel>
