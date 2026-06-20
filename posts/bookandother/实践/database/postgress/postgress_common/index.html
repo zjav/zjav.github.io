@@ -128,19 +128,19 @@ FROM  pg_class c --LEFT JOIN pg_tablespace ts ON c.reltablespace = ts.oid
 LEFT JOIN pg_namespace n ON c.relnamespace = n.oid
 ,pg_attribute a, pg_type t, pg_description d -- pg_database da
 where a.attrelid=c.oid and a.atttypid=t.oid and d.objoid=a.attrelid and d.objsubid=a.attnum 
---AND  c.relname = upper(&#39;t_110000_result&#39;)
+--AND  c.relname = upper(&#39;&#39;)
 -- AND c.relnamespace = da.dattablespace 
-AND d.description LIKE &#39;%服务%&#39;
-AND c.relname IN (lower(&#39;T_CAOT_TASK_EXTD_NEW&#39;),lower(&#39;T_CAOT_ADV_TASK&#39;))
---AND a.attname LIKE  lower(&#39;%QUES_DESC%&#39;)
---AND a.attname = &#39;select_id&#39;
---AND a.attname LIKE lower(&#39;%ext_key12_base%&#39;)
+AND d.description LIKE &#39;%%&#39;
+AND c.relname IN (lower(&#39;&#39;),lower(&#39;&#39;))
+--AND a.attname LIKE  lower(&#39;%%&#39;)
+--AND a.attname = &#39;&#39;
+--AND a.attname LIKE lower(&#39;%%&#39;)
 ;
 
 --查询所有库
 select * from pg_database pd 
 join pg_user pu on pd.datdba = pu.usesysid
-where pu.usename = &#39;ccdbuser&#39;
+where pu.usename = &#39;&#39;
 ;
 
 预估数据量:
