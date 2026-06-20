@@ -62,5 +62,26 @@
 				<guid>https://zjav.github.io/tags/language/</guid>
 				<description></description>
 			</item>
+			<item>
+				<title>Vscode</title>
+				<link>https://zjav.github.io/tags/vscode/</link>
+				<pubDate>Thu, 18 Jun 2026 00:54:10 +0800</pubDate>
+				<guid>https://zjav.github.io/tags/vscode/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Blog</title>
+				<link>https://zjav.github.io/tags/blog/</link>
+				<pubDate>Tue, 16 Jun 2026 01:00:44 +0800</pubDate>
+				<guid>https://zjav.github.io/tags/blog/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Hugo</title>
+				<link>https://zjav.github.io/tags/hugo/</link>
+				<pubDate>Tue, 16 Jun 2026 01:00:44 +0800</pubDate>
+				<guid>https://zjav.github.io/tags/hugo/</guid>
+				<description></description>
+			</item>
 	</channel>
 </rss>

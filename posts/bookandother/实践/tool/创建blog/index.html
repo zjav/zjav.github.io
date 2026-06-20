@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>创建blog - zjav&#39;s blog</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/tool/%E5%88%9B%E5%BB%BAblog/">
+	<meta property="og:site_name" content="zjav&#39;s blog">
+	<meta property="og:title" content="创建blog">
+	<meta property="og:description" content="创建blog的过程， 隐去了一些邮箱网址">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-06-16T01:00:44+08:00">
+		<meta property="article:modified_time" content="2026-06-16T01:00:44+08:00">
+		<meta property="article:tag" content="Blog">
+		<meta property="article:tag" content="Hugo">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="创建blog">
+	<meta name="twitter:description" content="创建blog的过程， 隐去了一些邮箱网址">
+<meta name="application-name" content="zjav&#39;s blog">
+<meta name="apple-mobile-web-app-title" content="zjav&#39;s blog">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/tool/%E5%88%9B%E5%BB%BAblog/" /><link rel="next" href="https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/vscode/vscode%E9%85%8D%E7%BD%AE%E5%92%8C%E5%BF%AB%E6%8D%B7%E9%94%AE/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "创建blog",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/zjav.github.io\/posts\/bookandother\/%E5%AE%9E%E8%B7%B5\/tool\/%E5%88%9B%E5%BB%BAblog\/"
+        },"genre": "posts","keywords": "blog, hugo","wordcount":  650 ,
+        "url": "https:\/\/zjav.github.io\/posts\/bookandother\/%E5%AE%9E%E8%B7%B5\/tool\/%E5%88%9B%E5%BB%BAblog\/","datePublished": "2026-06-16T01:00:44+08:00","dateModified": "2026-06-16T01:00:44+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "zjav"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="zjav&#39;s blog">zjav&#39;s blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="zjav&#39;s blog">zjav&#39;s blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">创建blog</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>zjav</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tool/"><i class="far fa-folder" aria-hidden="true"></i>Tool</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-16">2026-06-16</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 650 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#搜索">搜索</a></li>
+    <li><a href="#摘要">摘要</a></li>
+    <li><a href="#图片">图片</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#因为使用git-submodule-add-所以将子模块关联到了自身git库">因为使用git submodule add, 所以将子模块关联到了自身git库</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>创建blog的过程， 隐去了一些邮箱网址</p>
+<p>hugo new posts/bookandother/<br>
+hugo new posts/bookandother/实践/database/cache/redis_command_命令.md</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>本来想将public模块作为子模块(git submodule add), 这样只需要push一回, 但是另一个机器下载还得来一遍, 先这样凑活使吧</code></pre></div>
+<p>&ndash;层级应该和bookandoher一样起码和实践一样， 这个已实现<br>
+&ndash;以后好调整， 外围的想办法push上去 已实现</p>
+<h1 id="安装">安装</h1>
+<p>安装winget  appstore 或者git 上Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle</p>
+<p>winget -l D:\database\oracle 指定安装位置， 级别要那个具体</p>
+<p>hugo new project quickstart</p>
+<p>cd quickstart<br>
+git init</p>
+<p>git submodule add <a href="https://github.com/dillonzq/LoveIt.git" target="_blank" rel="noopener noreffer ">https://github.com/dillonzq/LoveIt.git</a> themes/LoveIt  (应该是clone到本地就行, 这样会把模块关联到自身blog, 如果blog想上传到git库会很麻烦)</p>
+<p>echo &ldquo;theme = &lsquo;LoveIt&rsquo;&rdquo; &raquo; hugo.toml</p>
+<h1 id="新建文章">新建文章</h1>
+<p>hugo new posts/bookandother/实践/database/cache/redis_command_命令.md<br>
+hugo new posts/技术.md<br>
+保存文件，然后启动 Hugo 的开发服务器。您可以运行以下任一命令来包含草稿内容:<br>
+hugo server &ndash;buildDrafts<br>
+hugo server -D<br>
+说着两者没区别， chatgpt说是内存渲染</p>
+<p>由于 Hugo 主题用于.Scratch实现某些功能，强烈建议您向命令添加&ndash;disableFastRender参数，hugo server以便实时预览您正在编辑的页面。<br>
+hugo serve &ndash;disableFastRender -D 这个默认不编译草稿所以要加-D</p>
+<p>hugo 会更新public文件夹<br>
+hugo -D</p>
+<hr>
+<h1 id="gitpage库关联">gitpage库关联</h1>
+<p>cd public  #这一步很重要<br>
+git init</p>
+<p>git remote add origin <a href="mailto:git@github.com" rel="">git@github.com</a>:XXXX.git</p>
+<p>git status  # 查看当前修改状态。<br>
+git add .  # 添加所有修改过的文件。你也可以只添加某个文件。<br>
+git commit -m &ldquo;new test&rdquo;<br>
+远程仓库新建了分支main, 修改了默认到main  现在github默认分支是main</p>
+<p>git push -u origin main</p>
+<p>还是404 是GitHub Pages 的分支也要调整</p>
+<h1 id="主题设置">主题设置</h1>
+<p>=============主题设置</p>
+<p>使用了主题还需要改最外层的hugo.toml, 我猜的大概是<br>
+里面还按例子加了支持换行的配置<br>
+[markup.goldmark.renderer]</p>
+<p>whether to use HTML tags directly in the document</p>
+<p>是否在文档中直接使用 HTML 标签</p>
+<p>​      hardWraps = true</p>
+<blockquote>
+<p>archetypes\default.md</p>
+<p>可以照着</p>
+</blockquote>
+<h2 id="搜索">搜索</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>修改的是hugo.toml, 最外层的那个
+
+[params]
+# LoveIt NEW | 0.2.0 Search config
+  [params.search]
+    enable = true
+    # type of search engine [&#34;lunr&#34;, &#34;algolia&#34;]
+    type = &#34;lunr&#34;
+    # max index length of the chunked content
+    contentLength = 4000
+    # placeholder of the search bar
+    placeholder = &#34;&#34;
+    # LoveIt NEW | 0.2.1 max number of results length
+    maxResultLength = 10
+    # LoveIt NEW | 0.2.3 snippet length of the result
+    snippetLength = 30
+    # LoveIt NEW | 0.2.1 HTML tag name of the highlight part in results
+    highlightTag = &#34;em&#34;
+    # LoveIt NEW | 0.2.4 whether to use the absolute URL based on the baseURL in search index
+    absoluteURL = false
+    [params.search.algolia]
+      index = &#34;&#34;
+      appID = &#34;&#34;
+      searchKey = &#34;&#34;
+      
+      
+# Options to make hugo output files
+[outputs]
+  # LoveIt CHANGED | 0.2.0
+  home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]
+  page = [&#34;HTML&#34;, &#34;MarkDown&#34;]
+  section = [&#34;HTML&#34;, &#34;RSS&#34;]
+  taxonomy = [&#34;HTML&#34;, &#34;RSS&#34;]</code></pre></div>
+<h2 id="摘要">摘要</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>现象: 当开头使用code的时候, 页面会把code全展示, 一般为了美观需要让它省略展示
+
+摘要选择的优先顺序
+由于摘要的表达方式多种多样，了解其顺序非常重要。顺序如下：
+
+如果&lt;!--more--&gt;文章中存在摘要分隔符，但分隔符之前没有任何内容，则描述将用作摘要。
+如果&lt;!--more--&gt;文章中存在摘要分隔符，则分隔符之前的文本将按照手动摘要拆分方法提供。
+如果文章前置元数据中存在摘要变量，则该变量的值将按照前置元数据摘要方法提供。
+文章开头的文本将按照自动摘要拆分方式提供。</code></pre></div>
+<h2 id="图片">图片</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>推荐第一种: (下面有三种方法,第一种是hugo自带的)
+page-resources:  ps: index.md  images目录名
+content
+└── post
+    ├── first-post
+    │   ├── images
+    │   │   ├── a.jpg
+    │   │   ├── b.jpg
+    │   │   └── c.jpg
+    │   ├── index.md (root of page bundle)
+    │   ├── latest.html
+    │   ├── manual.json
+    │   ├── notice.md
+    │   ├── office.mp3
+    │   ├── pocket.mp4
+    │   ├── rating.pdf
+    │   └── safety.txt
+    └── second-post
+        └── index.md (root of page bundle)
+
+page-bundles:    (没试过)
+content/
+├── about/
+│   ├── index.md
+│   └── welcome.jpg
+└── privacy.md
+
+具体可看:
+https://hugoloveit.com/theme-documentation-content/
+引用图像和音乐等本地资源主要有三种方式：
+
+使用“页面包”（page bundles）中的页面资源。你可以通过 `Resources.GetMatch` 的匹配值，或者直接使用相对于页面目录的资源文件路径来引用这些资源。
+将资源存储在 `assets` 目录中（默认为 `/assets`）。在文章中引用时，资源路径需相对于 `assets` 目录。
+将资源存储在 `static` 目录中（默认为 `/static``）。在文章中引用时，资源路径需相对于 `static` 目录。
+上述引用方式的优先级也遵循此顺序。
+
+主题中许多地方都可以使用上述本地资源引用方式，例如链接、图像、图像短代码（shortcode）、音乐短代码以及 Front Matter 中的某些参数。
+
+未来将支持对页面资源或 `assets` 目录中的图像进行处理。这真的很棒！
+
+There are three ways to reference local resources such as images and music:
+
+Using page resources in page bundles. You can reference page resources by the value for Resources.GetMatch or the filepath of the resource relative to the page directory directly.
+Store resources in the assets directory, which is /assets by default. The filepath of the resource to reference in the post is relative to the assets directory.
+Store resources in the static directory, which is /static by default. The filepath of the resource to reference in the post is relative to the static directory.
+The priority of references is also in the above order.
+
+There are many places in the theme where the above local resource references can be used, such as links, images, image shortcode, music shortcode and some params in the front matter.
+
+Images in page resources or assets directory processing will be supported in the future. It’s really cool! </code></pre></div>
+<p>=============主题设置 END</p>
+<h1 id="回退">回退</h1>
+<p>==========回退</p>
+<p>git remote remove origin</p>
+<blockquote>
+<p>git remote -v</p>
+</blockquote>
+<p>==========回退 END</p>
+<h1 id="重新生成publickey">重新生成publickey</h1>
+<p>==================重新生成publickey</p>
+<blockquote>
+<p>ssh-keygen -t ed25519 -C &ldquo;邮箱&rdquo;<br>
+cd  %userprofile%.ssh<br>
+id_ed25519.pub 文件</p>
+</blockquote>
+<p>ssh -T <a href="mailto:git@github.com" rel="">git@github.com</a><br>
+==================重新生成publickey END</p>
+<h1 id="参考网址">参考网址</h1>
+<p><a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener noreffer ">https://gohugo.io/getting-started/quick-start/</a><br>
+<a href="https://zhuanlan.zhihu.com/p/57361697" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/57361697</a></p>
+<p><a href="https://gohugo.io/host-and-deploy/host-on-github-pages/#prerequisites" target="_blank" rel="noopener noreffer ">https://gohugo.io/host-and-deploy/host-on-github-pages/#prerequisites</a><br>
+ps:action 还没研究</p>
+<p><a href="https://hugoloveit.com/theme-documentation-content/#front-matter" target="_blank" rel="noopener noreffer ">https://hugoloveit.com/theme-documentation-content/#front-matter</a><br>
+markdown语法</p>
+<h1 id="error">error</h1>
+<p>===============ssl错误</p>
+<p>git config &ndash;global http.sslVerify false<br>
+===============ssl错误 END</p>
+<p>===================push错误</p>
+<p>git pull origin main &ndash;allow-unrelated-histories<br>
+===================push错误</p>
+<h2 id="因为使用git-submodule-add-所以将子模块关联到了自身git库">因为使用git submodule add, 所以将子模块关联到了自身git库</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-shell">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ git submodule status
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ git rm --cached themes/LoveIt
+</span></span><span class="line"><span class="cl">rm <span class="s1">&#39;themes/LoveIt&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ rm -rf .git/modules/themes/LoveIt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ rm -rf themes/LoveIt/.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">最后重新加入git库, 我是desktop操作的
+</span></span><span class="line"><span class="cl">git add themes/LoveIt
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Convert LoveIt from submodule to normal directory&#34;</span></span></span></code></pre></div></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2026-06-16</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/tool/%E5%88%9B%E5%BB%BAblog/" data-title="创建blog" data-hashtags="blog,hugo"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/tool/%E5%88%9B%E5%BB%BAblog/" data-title="创建blog"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/tool/%E5%88%9B%E5%BB%BAblog/" data-hashtag="blog"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/tool/%E5%88%9B%E5%BB%BAblog/" data-title="创建blog"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/tool/%E5%88%9B%E5%BB%BAblog/" data-title="创建blog"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/tool/%E5%88%9B%E5%BB%BAblog/" data-title="创建blog"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="https://zjav.github.io/posts/bookandother/%E5%AE%9E%E8%B7%B5/tool/%E5%88%9B%E5%BB%BAblog/" data-title="创建blog" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fzjav.github.io%2fposts%2fbookandother%2f%25E5%25AE%259E%25E8%25B7%25B5%2ftool%2f%25E5%2588%259B%25E5%25BB%25BAblog%2f&amp;text=%e5%88%9b%e5%bb%bablog" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/blog/">Blog</a>,&nbsp;<a href="/tags/hugo/">Hugo</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/posts/bookandother/%E5%AE%9E%E8%B7%B5/vscode/vscode%E9%85%8D%E7%BD%AE%E5%92%8C%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="next" rel="next" title="Vscode配置和快捷键">Vscode配置和快捷键<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"> <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.163.2">Hugo</a> | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.js"></script></body>
+</html>
