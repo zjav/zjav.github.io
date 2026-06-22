@@ -130,7 +130,7 @@ OK
 <p>2、修改从服务器配置文件</p>
 <p>cd /usr/local/redis</p>
 <p>vim redis.conf</p>
-<pre><code>slaveof 192.168.8.61 6379(主)
+<pre><code>slaveof 192.XX.XX.61 6379(主)
 </code></pre>
 <p>3、重启redis</p>
 <p>4、查看主从状态</p>
